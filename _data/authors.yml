@@ -1,0 +1,20 @@
+# /_data/authors.yml
+
+Hyperidiot:
+  name             : "Hyperidiot"
+  avatar           : "/assets/images/typing_cat.gif"
+  bio              : "Just New in Develop field, Want to be Digital Nomad"
+  location         : "Gimje, Korea | Tokyo, Japan"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:tndvjd@gmail.com"
+    - label: "LOL MBTI"
+      icon: "fas fa-fw fa-link"
+      url: "https://lolmbti.netlify.app/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/tndvjd/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/hyperidiot__"
