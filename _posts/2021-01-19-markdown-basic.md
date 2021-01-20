@@ -1,7 +1,6 @@
 ---
 layout: single
 title: "마크다운 사용법"
-date: 2021-01-19 22:24:00 +0900
 toc: true
 author_profile: true
 ---
@@ -23,17 +22,14 @@ author_profile: true
 모든 HTML 문법을 대체할 수는 없다.
 
 
----
-
 ## 마크다운 문법
 글 작성을 위해 필요한 기본적인 문법을 알아보도록 하자. 본 게시글에서는 모든 마크다운 문법을 다루지는 않고 아주 기초적인 마크다운 문법만을 다루고 있다.
 나도 깃헙을 통해 마크다운을 처음 알게 되었고, 이제 막 사용하기 시작했으므로 복습 겸 남기는 의미가 크기 때문에..
 
----
 
 
 
-## 1. 제목 Headers
+### 1. 제목 Headers
 
 `#` 으로 시작하는 텍스트. `HTML`에서 `<h1> ~ <h6>`과 동일한 역할을 수행한다.<br>
 `#`의 갯수가 많아질 수록 크기가 줄어든다. **(중요도가 낮아진다)**
@@ -45,9 +41,9 @@ author_profile: true
 > <p style="font-size: 20px"> This is Heading 5. </p>
 > <p style="font-size: 16px"> This is Heading 6. </p>
 
----
 
-## 2. 강조 Emphasis
+
+### 2. 강조 Emphasis
 
 **볼드체**를 사용하거나 *이탤릭체*를 사용하여 강조를 표현할 수 있다.
 
@@ -57,9 +53,8 @@ author_profile: true
 | `이탤릭체는 *이렇게* 사용할 수 있다.` | 이탤릭체는 *이렇게* 사용할 수 있다. | 
 | `진짜 중요할땐 ***이렇게*** 써보자` | 진짜 중요할땐 ***이렇게*** 써보자 |
 
----
 
-## 3. 인용 Blockquotes
+### 3. 인용 Blockquotes
 
 단순히 `>` 를 입력한 후 글을 쓰면 인용문이 된다.
 
@@ -69,9 +64,9 @@ author_profile: true
 
 > 인용문을 이렇게 만들 수 있다.
 
----
 
-## 4. 코드 블럭 Code Blocks
+
+### 4. 코드 블럭 Code Blocks
 
 `~~~` 블럭의 시작, 끝에 위 문자를 입력하여 물결표를 세개 입력하여 코드 블럭을 만들 수 있다.
 
@@ -90,9 +85,8 @@ author_profile: true
 <span> ex : ~~~html
 ~~~
 
----
 
-## 5. 하이퍼링크 Hyperlinks
+### 5. 하이퍼링크 Hyperlinks
 
 문자에 하이퍼링크를 연결할 수 있다.
 
@@ -100,9 +94,8 @@ author_profile: true
 -----|-----
 | `[구글](https://google.com)` | [구글](https://google.com) |
 
----
 
-## 6. 이미지
+### 6. 이미지
 
 | **Markdown** | **Output** |
 -----|-----

@@ -3,8 +3,6 @@ layout: single
 title: "First Post"
 date: 2021-01-18 16:21:36 +0900
 author_profile: true
-header:
-  image: /assets/images/me.gif
 ---
 
 어제 한 5시간 내내 깃허브 블로그 구축을 위해 씨름을 했는데 드디어 **성공**했으므로 자축&정상작동 확인용으로 첫 포스팅을 합니다.
