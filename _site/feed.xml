@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-23T00:42:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat</id><content type="html" xml:base="http://localhost:4000/pop-cat/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-25T22:50:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat-app/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat-app</id><content type="html" xml:base="http://localhost:4000/pop-cat-app/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/popcat.gif&quot; alt=&quot;popcat.gif&quot; /&gt;&lt;/p&gt;
 
@@ -10,7 +10,64 @@
 &lt;p&gt;이번에는 이벤트 제어를 메인으로, 사용해본 적 없는 keydown 이벤트를 사용해봤다. 모바일 지원을 위해 touchstart / touchend 기능도 사용해봤으나 원활하게 작동하지는 않는 듯 하다. (뭐가 문제인지 모르겠음)&lt;/p&gt;
 
 &lt;p&gt;역시 작은 요소라도 하나씩 만들어보는 게 기억에는 가장 잘 남지 않나 싶다.
-앞으로 꾸준히 이런 작은 요소들을 만들어보면서 각 코어기능들을 조금 더 공부할 수 있도록 해보려 한다.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
+앞으로 꾸준히 이런 작은 요소들을 만들어보면서 각 코어기능들을 조금 더 공부할 수 있도록 해보려 한다.&lt;/p&gt;
+
+&lt;p&gt;여기서 해볼 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/pop-cat&quot;&gt;POPCAT!&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/todopreview.png&quot; alt=&quot;todo&quot; /&gt;
+내가 좋아하는 노마드코더 니꼬가 말하길, 투두리스트가 자바스크립트 계의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world&lt;/code&gt;라고 한다.&lt;/p&gt;
+
+&lt;p&gt;마침 관련한 튜토리얼이 있어 만들어봤다. 기초 중의 기초인 Date 표시부터, 로컬스토리지를 이용한 유저네임과 투두리스트의 보존이 메인이다.&lt;/p&gt;
+
+&lt;p&gt;어려움을 겪었던 부분은 로컬스토리지에 저장된 오브젝트를 다시 문자열로 파싱하여 실제 HTML 엘리멘트로 변환시키는게 아니었나 싶다.&lt;/p&gt;
+
+&lt;p&gt;추가적으로 무료 api를 이용하여 날씨 정보를 받아오는 기능이 있는데, 질 좋은 api를 제공해주더라도 거기서 내가 필요한 데이터를 뽑아 원하는 형태로 변경시키는 것도 만만찮다는 것을 새삼 깨달았다.
+맘같아선 기온 뿐만 아니라 현재 기상상태 정보를 불러와 해당 기상상태의 아이콘도 같이 띄우고 싶었으나, 귀찮아서 패스했다.&lt;/p&gt;
+
+&lt;p&gt;여기서 확인해볼 수 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/hyper-todolist&quot;&gt;HyperToDo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry><entry><title type="html">CSS 레이아웃 연습</title><link href="http://localhost:4000/CSS-practice/" rel="alternate" type="text/html" title="CSS 레이아웃 연습" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/CSS-practice</id><content type="html" xml:base="http://localhost:4000/CSS-practice/">&lt;p&gt;최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/1week.png&quot; alt=&quot;weekData&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;웹은 결국 HTML,CSS,JS 삼박자가 고루 맞지 않으면 제대로 된 결과물을 만들 수 없다.&lt;/p&gt;
+
+&lt;p&gt;사실 아직도 세 언어에 대해서는 배울 것이 엄청 많이 남아있는데, 자바스크립트의 인터랙션을 위한 최소한의 CSS만 사용하고 그 외 제대로 된 스타일링을 해본 적은 없는 듯 하다.&lt;/p&gt;
+
+&lt;p&gt;1주일간 어떤 언어에 어느정도의 시간을 투자했는지 보여주는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WakaTime&lt;/code&gt;의 대시보드를 확인해보니, 내가 생각했던 것보다 시간차가 많이 나기에 당황했다.&lt;/p&gt;
+
+&lt;p&gt;HTML과 CSS에 저정도 시간이 들어간 것도 기본적 스타일링조차 미숙하기 때문이리라.&lt;/p&gt;
+
+&lt;p&gt;그래서 &lt;a href=&quot;https://dribbble.com/&quot;&gt;Dribbble&lt;/a&gt;과 &lt;a href=&quot;https://www.pinterest.co.kr/&quot;&gt;Pinterest&lt;/a&gt; 사이트에 올라와 있는 몇가지 ui를 보고 클론해봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dashboard.png&quot; alt=&quot;dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/tabletapp.png&quot; alt=&quot;tabletapp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위 두 레이아웃을 만들 때는 모든 컴포넌트를 Flexbox를 이용해서 배치했는데, 특정 부분은 Grid가 나은 걸 알면서도 Grid의 사용법을 몰라 울며 겨자먹기로 플렉스를 사용했다.&lt;/p&gt;
+
+&lt;p&gt;다음엔 Grid를 이용해서 레이아웃을 배치해보고, 실제 간단한 기능을 하는 앱을 하나 만들어볼까 한다. 현재 구상중인건 명상? 화이트노이즈? 어플.&lt;/p&gt;
+
+&lt;p&gt;오디오 이벤트 관련해서는 팝캣을 만들 때 일부 습득한 지식이 있으니, 복습 겸 해볼까 싶다.&lt;/p&gt;
+
+&lt;p&gt;마지막으로 굉장히 단순한데 매우 예쁜 기법을 알게 됐는데, 바로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Parallax Effect&lt;/code&gt;다.&lt;/p&gt;
+
+&lt;p&gt;배경은 멀리, 글씨는 가까이에 있는 것 처럼 보이게 하는 기법이라고 한다.&lt;/p&gt;
+
+&lt;p&gt;웹에서 보면 아래와 같은 모습이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/parallax.gif&quot; alt=&quot;parallax&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;가끔 특정 웹사이트에서 이런 기법을 몇군데 봤었는데, 이게 어떤 효과인지 모르니 찾아 볼 수도 없었지…&lt;/p&gt;
+
+&lt;p&gt;어떻게 구현하는건지 알게 되서 기쁘다.&lt;/p&gt;
+
+&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
 
 &lt;hr /&gt;
 
