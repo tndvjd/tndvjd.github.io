@@ -99,10 +99,10 @@ author:
   location         : "Korea | Japan"
   email            : "tndvjd@gmail.com"
   links:
-    - label: "LOL MBTI"
+    - label: "Popcat meme"
       icon: "fas fa-fw fa-link"
       url: "https://tndvjd.github.io/pop-cat/index.html"
-    - label: "Pop cat meme"
+    - label: "LOL MBTI"
       icon: "fas fa-fw fa-link"
       url: "https://lolmbti.netlify.app/"
     - label: "GitHub"

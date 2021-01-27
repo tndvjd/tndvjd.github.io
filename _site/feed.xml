@@ -1,37 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-25T22:50:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat-app/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat-app</id><content type="html" xml:base="http://localhost:4000/pop-cat-app/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-27T23:49:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">화살표 함수(Arrow Function) 기초</title><link href="http://localhost:4000/arrow-function/" rel="alternate" type="text/html" title="화살표 함수(Arrow Function) 기초" /><published>2021-01-27T23:45:36+09:00</published><updated>2021-01-27T23:45:36+09:00</updated><id>http://localhost:4000/arrow-function</id><content type="html" xml:base="http://localhost:4000/arrow-function/">&lt;p&gt;ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/popcat.gif&quot; alt=&quot;popcat.gif&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;화살표-함수arrow-function&quot;&gt;화살표 함수(Arrow Function)&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;그냥 귀여워서 만들었다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;화살표 함수는 ES5에서 등장했으며, 기존 함수 작성법을 보다 간결하게 할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;코딩을 시작하면서 느낀 점이 있는데, 참 놀랍다. 만들고 싶다고 생각한 걸 눈에 보이는 아웃풋으로 변환할 수 있다니..
-단순히 컴퓨터와 키보드만 있다면 내 아이디어를 실현시킬 수 있는 것이다.&lt;/p&gt;
+&lt;p&gt;이 외에도 몇가지 추가적인 기능이 있는데, 우선은 기초적인 작성법만 기술하고자 한다.&lt;/p&gt;
 
-&lt;p&gt;이번에는 이벤트 제어를 메인으로, 사용해본 적 없는 keydown 이벤트를 사용해봤다. 모바일 지원을 위해 touchstart / touchend 기능도 사용해봤으나 원활하게 작동하지는 않는 듯 하다. (뭐가 문제인지 모르겠음)&lt;/p&gt;
+&lt;h2 id=&quot;화살표-함수의-작성법&quot;&gt;화살표 함수의 작성법&lt;/h2&gt;
 
-&lt;p&gt;역시 작은 요소라도 하나씩 만들어보는 게 기억에는 가장 잘 남지 않나 싶다.
-앞으로 꾸준히 이런 작은 요소들을 만들어보면서 각 코어기능들을 조금 더 공부할 수 있도록 해보려 한다.&lt;/p&gt;
+&lt;p&gt;코드를 보면 기존 자바스크립트의 함수 작성법과의 차이점이 즉시 느껴질 것이다.&lt;/p&gt;
 
-&lt;p&gt;여기서 해볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;기존 자바스크립트&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;multiply&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;multiply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;ES5&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;multiply&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;multiply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;훨씬 간결하지 않은가?&lt;/p&gt;
+
+&lt;p&gt;그러나 화살표 함수는 익명 함수로만 사용이 가능하다.
+이를 호출하고 싶다면, 함수 표현식을 사용하여 호출할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;때문에 이해를 돕기 위해 기존 자바스크립트의 코드도 함수 표현식으로 작성했다.&lt;/p&gt;
+
+&lt;p&gt;화살표 함수는 인자를 하나만 받을 경우, 괄호를 생략할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 25&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 코드는 아래 코드와 같은 동작을 한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 25&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;화살표-함수-사용-시의-주의점&quot;&gt;화살표 함수 사용 시의 주의점&lt;/h3&gt;
+
+&lt;p&gt;기본적으로 화살표 함수는 표현식이 한 줄일때 사용하기 가장 편하다.&lt;/p&gt;
+
+&lt;p&gt;그러나 함수의 표현식이 길어진다면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt;을 직접 입력 해줘야한다.&lt;/p&gt;
+
+&lt;p&gt;예시를 보자.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;함수의 본문이 두 줄 이상이면 기존 함수 작성과 동일하게 중괄호로 내용을 묶어주어야 하며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt;을 직접 입력해줘야 한다는 점에 유의하자.&lt;/p&gt;
+
+&lt;h2 id=&quot;요약&quot;&gt;요약&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;화살표 함수는 ES5에서 등장했으며, 기존의 함수 작성법을 조금 더 간결하게 해줄 수 있다.&lt;/li&gt;
+  &lt;li&gt;함수가 받는 인자가 하나라면 괄호는 생략 가능하지만, 두 개 이상이라면 생략이 불가능하다.&lt;/li&gt;
+  &lt;li&gt;함수 본문이 한 줄이라면 암묵적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt;이 있는 것 처럼 동작하지만, 두 줄 이상이라면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt; 지시자를 입력해줘야 한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;더 자세한 내용을 배우기 위해선 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt; 등 선행지식이 있어야 한다.
+추후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt;에 대해서 포스팅 하고, 심화 내용에 대해 기술해보려 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/pop-cat&quot;&gt;POPCAT!&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/todopreview.png&quot; alt=&quot;todo&quot; /&gt;
-내가 좋아하는 노마드코더 니꼬가 말하길, 투두리스트가 자바스크립트 계의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world&lt;/code&gt;라고 한다.&lt;/p&gt;
-
-&lt;p&gt;마침 관련한 튜토리얼이 있어 만들어봤다. 기초 중의 기초인 Date 표시부터, 로컬스토리지를 이용한 유저네임과 투두리스트의 보존이 메인이다.&lt;/p&gt;
-
-&lt;p&gt;어려움을 겪었던 부분은 로컬스토리지에 저장된 오브젝트를 다시 문자열로 파싱하여 실제 HTML 엘리멘트로 변환시키는게 아니었나 싶다.&lt;/p&gt;
-
-&lt;p&gt;추가적으로 무료 api를 이용하여 날씨 정보를 받아오는 기능이 있는데, 질 좋은 api를 제공해주더라도 거기서 내가 필요한 데이터를 뽑아 원하는 형태로 변경시키는 것도 만만찮다는 것을 새삼 깨달았다.
-맘같아선 기온 뿐만 아니라 현재 기상상태 정보를 불러와 해당 기상상태의 아이콘도 같이 띄우고 싶었으나, 귀찮아서 패스했다.&lt;/p&gt;
-
-&lt;p&gt;여기서 확인해볼 수 있다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/hyper-todolist&quot;&gt;HyperToDo&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry><entry><title type="html">CSS 레이아웃 연습</title><link href="http://localhost:4000/CSS-practice/" rel="alternate" type="text/html" title="CSS 레이아웃 연습" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/CSS-practice</id><content type="html" xml:base="http://localhost:4000/CSS-practice/">&lt;p&gt;최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;Arrow function expressions MDN&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서</summary></entry><entry><title type="html">CSS 레이아웃 연습</title><link href="http://localhost:4000/CSS-practice/" rel="alternate" type="text/html" title="CSS 레이아웃 연습" /><published>2021-01-25T23:45:36+09:00</published><updated>2021-01-25T23:45:36+09:00</updated><id>http://localhost:4000/CSS-practice</id><content type="html" xml:base="http://localhost:4000/CSS-practice/">&lt;p&gt;최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/1week.png&quot; alt=&quot;weekData&quot; /&gt;&lt;/p&gt;
 
@@ -67,7 +118,40 @@
 
 &lt;p&gt;어떻게 구현하는건지 알게 되서 기쁘다.&lt;/p&gt;
 
-&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
+&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat-app/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat-app</id><content type="html" xml:base="http://localhost:4000/pop-cat-app/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/popcat.gif&quot; alt=&quot;popcat.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;그냥 귀여워서 만들었다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;코딩을 시작하면서 느낀 점이 있는데, 참 놀랍다. 만들고 싶다고 생각한 걸 눈에 보이는 아웃풋으로 변환할 수 있다니..
+단순히 컴퓨터와 키보드만 있다면 내 아이디어를 실현시킬 수 있는 것이다.&lt;/p&gt;
+
+&lt;p&gt;이번에는 이벤트 제어를 메인으로, 사용해본 적 없는 keydown 이벤트를 사용해봤다. 모바일 지원을 위해 touchstart / touchend 기능도 사용해봤으나 원활하게 작동하지는 않는 듯 하다. (뭐가 문제인지 모르겠음)&lt;/p&gt;
+
+&lt;p&gt;역시 작은 요소라도 하나씩 만들어보는 게 기억에는 가장 잘 남지 않나 싶다.
+앞으로 꾸준히 이런 작은 요소들을 만들어보면서 각 코어기능들을 조금 더 공부할 수 있도록 해보려 한다.&lt;/p&gt;
+
+&lt;p&gt;여기서 해볼 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/pop-cat&quot;&gt;POPCAT!&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/todopreview.png&quot; alt=&quot;todo&quot; /&gt;
+내가 좋아하는 노마드코더 니꼬가 말하길, 투두리스트가 자바스크립트 계의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world&lt;/code&gt;라고 한다.&lt;/p&gt;
+
+&lt;p&gt;마침 관련한 튜토리얼이 있어 만들어봤다. 기초 중의 기초인 Date 표시부터, 로컬스토리지를 이용한 유저네임과 투두리스트의 보존이 메인이다.&lt;/p&gt;
+
+&lt;p&gt;어려움을 겪었던 부분은 로컬스토리지에 저장된 오브젝트를 다시 문자열로 파싱하여 실제 HTML 엘리멘트로 변환시키는게 아니었나 싶다.&lt;/p&gt;
+
+&lt;p&gt;추가적으로 무료 api를 이용하여 날씨 정보를 받아오는 기능이 있는데, 질 좋은 api를 제공해주더라도 거기서 내가 필요한 데이터를 뽑아 원하는 형태로 변경시키는 것도 만만찮다는 것을 새삼 깨달았다.
+맘같아선 기온 뿐만 아니라 현재 기상상태 정보를 불러와 해당 기상상태의 아이콘도 같이 띄우고 싶었으나, 귀찮아서 패스했다.&lt;/p&gt;
+
+&lt;p&gt;여기서 확인해볼 수 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/hyper-todolist&quot;&gt;HyperToDo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
 
 &lt;hr /&gt;
 

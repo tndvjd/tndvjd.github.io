@@ -34,4 +34,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/CSS-practice/",
         "teaser": null
+      },{
+        "title": "화살표 함수(Arrow Function) 기초",
+        "excerpt":"ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서 화살표 함수(Arrow Function) 화살표 함수는 ES5에서 등장했으며, 기존 함수 작성법을 보다 간결하게 할 수 있다. 이 외에도 몇가지 추가적인 기능이 있는데, 우선은 기초적인 작성법만 기술하고자 한다. 화살표 함수의 작성법 코드를 보면 기존 자바스크립트의 함수 작성법과의 차이점이 즉시 느껴질 것이다. 기존 자바스크립트 let multiply...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/arrow-function/",
+        "teaser": null
       }]
