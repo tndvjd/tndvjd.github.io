@@ -40,4 +40,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/arrow-function/",
         "teaser": null
+      },{
+        "title": "화이트 노이즈 어플리케이션",
+        "excerpt":"화이트 노이즈 어플을 만들어 보았다. 사운드 제어 이벤트 관련 및 forEach / this에 조금 더 익숙해지기 위해서 만들어보았다. 여기서 HTMLCollection을 제어할 수 있는 Attribute인 data-name에 대해서 알게 됐고, HTML상의 div와 audio의 라벨을 바인딩함으로 div의 클릭 이벤트가 발생할 때, 바인딩 된 audio를 재생하게 했다. 추가적으로 audio.duration을 활용, 남은 시간을 텍스트로 띄우고,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/meditation-app/",
+        "teaser": null
       }]
