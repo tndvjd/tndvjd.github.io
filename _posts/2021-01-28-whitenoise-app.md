@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "화이트 노이즈 어플리케이션"
-date: 2021-01-27 23:45:36 +0900
+date: 2021-01-28 23:45:36 +0900
 author_profile: true
 ---
 
