@@ -44,6 +44,18 @@ var store = [{
         "title": "화이트 노이즈 어플리케이션",
         "excerpt":"화이트 노이즈 어플을 만들어 보았다. 사운드 제어 이벤트 관련 및 forEach / this에 조금 더 익숙해지기 위해서 만들어보았다. 여기서 HTMLCollection을 제어할 수 있는 Attribute인 data-name에 대해서 알게 됐고, HTML상의 div와 audio의 라벨을 바인딩함으로 div의 클릭 이벤트가 발생할 때, 바인딩 된 audio를 재생하게 했다. 추가적으로 audio.duration을 활용, 남은 시간을 텍스트로 띄우고,...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/meditation-app/",
+        "url": "http://localhost:4000/whitenoise-app/",
+        "teaser": null
+      },{
+        "title": "함수 표현식과 함수 선언문의 차이",
+        "excerpt":"var와 마찬가지로, 함수도 호이스팅(Hoisting)이 일어난다. 함수의 생성 방법 크게 함수의 생성 방법은 세 가지로 나뉜다. 함수 선언문(function statement) 함수 표현식(function expression) Function() 생성자 함수 3번의 생성자 함수는 거의 사용되지 않는 방법으로 본 글에서는 다루지 않는다. 살펴볼 것은 함수 선언문과 함수 표현식의 차이이다. 함수 선언문(function statement) 함수 선언문은 다음과 같이 작성한다....","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/function-hoisting/",
+        "teaser": null
+      },{
+        "title": "플러터 사용 후기 및 스위프트 전향",
+        "excerpt":"리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기 당초 내가 개발을 시작한 목적은 앱 개발이었고, 프로그래밍 전반적인 지식이 전무한 상태에서 시작 언어로 많이 추천들 하는게 JS더라. 자바스크립트는 기본적으로 웹 브라우저에서 구동되는 프로그래밍 언어이고, 자연스레 웹 공부를 하게 됐었는데, 결과물이 조금씩 나올 때마다 뿌듯함도 있었으나,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/flutter-testimonial/",
         "teaser": null
       }]

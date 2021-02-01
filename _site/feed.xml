@@ -1,4 +1,241 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-29T01:30:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">화살표 함수(Arrow Function) 기초</title><link href="http://localhost:4000/arrow-function/" rel="alternate" type="text/html" title="화살표 함수(Arrow Function) 기초" /><published>2021-01-27T23:45:36+09:00</published><updated>2021-01-27T23:45:36+09:00</updated><id>http://localhost:4000/arrow-function</id><content type="html" xml:base="http://localhost:4000/arrow-function/">&lt;p&gt;ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-01T23:59:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">플러터 사용 후기 및 스위프트 전향</title><link href="http://localhost:4000/flutter-testimonial/" rel="alternate" type="text/html" title="플러터 사용 후기 및 스위프트 전향" /><published>2021-02-01T23:00:36+09:00</published><updated>2021-02-01T23:00:36+09:00</updated><id>http://localhost:4000/flutter-testimonial</id><content type="html" xml:base="http://localhost:4000/flutter-testimonial/">&lt;p&gt;리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기&lt;/p&gt;
+
+&lt;p&gt;당초 내가 개발을 시작한 목적은 앱 개발이었고, 프로그래밍 전반적인 지식이 전무한 상태에서 시작 언어로 많이 추천들 하는게 JS더라.&lt;/p&gt;
+
+&lt;p&gt;자바스크립트는 기본적으로 웹 브라우저에서 구동되는 프로그래밍 언어이고, 자연스레 웹 공부를 하게 됐었는데, 결과물이 조금씩 나올 때마다 뿌듯함도 있었으나,&lt;/p&gt;
+
+&lt;p&gt;빨리 앱 개발을 해보고 싶다는 생각이 조금씩 강해졌다.&lt;/p&gt;
+
+&lt;p&gt;그래서 RN이라는 프레임워크를 알게 되고 깔짝대봤다.&lt;/p&gt;
+
+&lt;p&gt;RN은 아무래도 JS 기반이다 보니 이해하기 조금 수월했고, 이런 크로스플랫폼 프레임워크를 찾다 보니 비슷한 성격을 가지고 있는게 플러터라는 사실을 알게 됐다.&lt;/p&gt;
+
+&lt;p&gt;플러터와 RN의 비교분석을 보다 보니, RN은 자바스크립트 브리지라는걸 이용해서 화면을 그리지만, 플러터는 C계열로 컴파일하여 안정적 네이티브 성능을 낸다는 차이점이 있었다.&lt;/p&gt;
+
+&lt;p&gt;무엇보다 킹 구글에서 밀어준다는 프레임워크라는게…&lt;/p&gt;
+
+&lt;p&gt;성능상의 우위가 있다고 하니, 내가 만들 앱이 헤비한 앱이 아니더라도 추후를 위해 한번쯤 맛봐볼까 하고 시작했던 게 계기.&lt;/p&gt;
+
+&lt;p&gt;근데 이틀정도 공부해보고 바로 포기했다.&lt;/p&gt;
+
+&lt;p&gt;이 코드를 보라..&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     &lt;span class=&quot;nl&quot;&gt;body:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;padding:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EdgeInsets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fromLTRB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;40.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;child:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Column&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;crossAxisAlignment:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CrossAxisAlignment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;children:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;[&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Center&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;child:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CircleAvatar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;backgroundImage:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AssetImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;assets/bio-pic.jpg&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;radius:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Divider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;height:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;color:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;grey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;850&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;thickness:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;endIndent:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&apos;NAME&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;color:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;height:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&apos;HYPERIDIOT&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;color:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;fontSize:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;28.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;fontWeight:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FontWeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;height:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;30.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&apos;YOUR SKILL LEVEL&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;color:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;height:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&apos;BEGINNER&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;color:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;fontSize:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;28.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;fontWeight:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FontWeight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;height:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;30.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;children:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;[&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Icon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Icons&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;check_circle_outline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;width:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                  &lt;span class=&quot;s&quot;&gt;&apos;Learning OOP&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;fontSize:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;children:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;[&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Icon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Icons&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;check_circle_outline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;width:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                  &lt;span class=&quot;s&quot;&gt;&apos;Passion&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;fontSize:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;nl&quot;&gt;children:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;[&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Icon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Icons&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;check_circle_outline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;SizedBox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;width:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                  &lt;span class=&quot;s&quot;&gt;&apos;Creativity&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+                  &lt;span class=&quot;nl&quot;&gt;style:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;fontSize:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;letterSpacing:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;HTML 태그를 작성하고, 인라인 스타일로 스타일링을 하는 느낌을 강하게 받았는데, 
+텍스트 한줄 입력하기 위해 들여야 하는 노력이 너무 컸다고 느껴졌다.
+RN이 오히려 스타일링과 요소부분을 구별 가능해서 낫다고 생각이 들 정도였다.&lt;/p&gt;
+
+&lt;p&gt;아.. RN도 그렇고, 플러터도 그렇고, 앱 개발은 이런 플로우로 개발을 하는건가? 라는 생각이 문득 들었고, RN할 때 깔아둔 안드로이드 스튜디오, 그리고 엑스코드는 어떤 식으로 화면을 그리는 지 궁금했다.&lt;/p&gt;
+
+&lt;p&gt;근데 찾아보니까 신세계더라.&lt;/p&gt;
+
+&lt;p&gt;역시 풀네이티브라 그런지, 화면을 그리는 것에 대해서는 훨씬 직관적이게 되어 있었다.&lt;/p&gt;
+
+&lt;p&gt;다만 안스나 엑스코드를 고른다는 건, 택일을 해야한다는 의미였다. 살짝 망설였으나, 내 안에서 답을 찾았고 스위프트를 선택하게 됐다.&lt;/p&gt;
+
+&lt;p&gt;내가 안드로이드 개발을 할지 iOS 개발을 할지의 기로에서 iOS를 선택한 이유는 간단했다.&lt;/p&gt;
+
+&lt;p&gt;내가 앱등이니까. 난 내가 쓰고싶다고 느낄 만한 앱을 우선 만들어 보고 싶으니까.&lt;/p&gt;
+
+&lt;p&gt;이렇게 스위프트를 골랐으니 공부를 해야하는데,&lt;/p&gt;
+
+&lt;p&gt;세상에, 프로그래밍 처음 배울때랑 다른 게 없다. 아주 일부의 개념만 이해되고, Optional이라는 스위프트 고유의 개념을 포함하여 거의 대부분을 다 처음 배워야 했다.&lt;/p&gt;
+
+&lt;p&gt;심지어 안드로이드처럼 이용 풀이 넓은게 아니라 자료도 비교적 부족한 느낌적인 느낌? ㅜㅜ&lt;/p&gt;
+
+&lt;p&gt;심지어 잘 정리된 건 영문이 많은데, 웹은 워낙 방대해서 국문으로 된 양질의 자료가 매우 많았으나…&lt;/p&gt;
+
+&lt;p&gt;스위프트의 경우는 버전이 바뀌면서 거의 대격변이라고 할 정도의 변화가 있었던 것 같은데, 국내강의 대부분 자료가 Outdated된 상태였다(스위프트 2 기준이라던지)&lt;/p&gt;
+
+&lt;p&gt;최근 자료는 대부분 영문이었다. ㅠㅠ 사실 영어 레퍼런스를 많이 봐야한다는 생각이 들면서도, 뭔가 문제에 직면했을 때 스택오버플로에 나온 글만 읽었으니 크게 영어실력 향상은 없던 듯 한데..&lt;/p&gt;
+
+&lt;p&gt;이번 기회에 영어도 같이 공부할 겸 개발 영어랑 좀 친해져봐야겠다.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기</summary></entry><entry><title type="html">함수 표현식과 함수 선언문의 차이</title><link href="http://localhost:4000/function-hoisting/" rel="alternate" type="text/html" title="함수 표현식과 함수 선언문의 차이" /><published>2021-01-29T16:17:36+09:00</published><updated>2021-01-29T16:17:36+09:00</updated><id>http://localhost:4000/function-hoisting</id><content type="html" xml:base="http://localhost:4000/function-hoisting/">&lt;p&gt;var와 마찬가지로, 함수도 &lt;strong&gt;호이스팅(Hoisting)&lt;/strong&gt;이 일어난다.&lt;/p&gt;
+
+&lt;h1 id=&quot;함수의-생성-방법&quot;&gt;함수의 생성 방법&lt;/h1&gt;
+
+&lt;p&gt;크게 함수의 생성 방법은 세 가지로 나뉜다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;함수 선언문(function statement)&lt;/li&gt;
+  &lt;li&gt;함수 표현식(function expression)&lt;/li&gt;
+  &lt;li&gt;Function() 생성자 함수&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;3번의 생성자 함수는 거의 사용되지 않는 방법으로 본 글에서는 다루지 않는다.&lt;/p&gt;
+
+&lt;p&gt;살펴볼 것은 함수 선언문과 함수 표현식의 차이이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;함수-선언문function-statement&quot;&gt;함수 선언문(function statement)&lt;/h2&gt;
+
+&lt;p&gt;함수 선언문은 다음과 같이 작성한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;함수-표현식function-expression&quot;&gt;함수 표현식(function expression)&lt;/h2&gt;
+
+&lt;p&gt;함수 표현식은 다음과 같이 작성한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;함수-호이스팅&quot;&gt;함수 호이스팅&lt;/h2&gt;
+
+&lt;p&gt;다음 예시를 보자.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;분명히 함수가 선언되기 이전인데 오류를 뿜지 않는다. 이를 &lt;strong&gt;함수 호이스팅&lt;/strong&gt;이라고 한다.
+함수 호이스팅은 함수 선언식으로 생성된 함수에서만 일어난다.&lt;/p&gt;
+
+&lt;p&gt;이제 함수 표현식으로 함수를 생성할 시 어떻게 되는지 다음 예시를 통해 살펴보자.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ERROR&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;함수 표현식으로 생성된 함수에서는 함수 호이스팅이 일어나지 않는다.
+이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;로 바꾸어도 동일하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;요약&quot;&gt;요약&lt;/h3&gt;
+
+&lt;p&gt;함수 표현식으로 생성된 함수는 함수 호이스팅이 일어나지 않고, 함수 선언문으로 생성된 함수는 함수 호이스팅이 일어난다.&lt;/p&gt;
+
+&lt;p&gt;이러한 특성을 이해하고 있어야, 본인이 예상치 못한 결과가 발생하는 일이 줄어들 것이다.&lt;/p&gt;
+
+&lt;p&gt;이러한 특성 때문에, 일반적으로 함수 표현식을 이용해 함수를 생성할 것이 권장되고 있으나, 특성을 이해하고 제어할 수 있다면 함수 선언문으로 함수를 생성해도 바람직한 결과를 얻을 수 있을 것이다.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">var와 마찬가지로, 함수도 호이스팅(Hoisting)이 일어난다.</summary></entry><entry><title type="html">화이트 노이즈 어플리케이션</title><link href="http://localhost:4000/whitenoise-app/" rel="alternate" type="text/html" title="화이트 노이즈 어플리케이션" /><published>2021-01-28T23:45:36+09:00</published><updated>2021-01-28T23:45:36+09:00</updated><id>http://localhost:4000/whitenoise-app</id><content type="html" xml:base="http://localhost:4000/whitenoise-app/">&lt;p&gt;화이트 노이즈 어플을 만들어 보았다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/meditation.png&quot; alt=&quot;meditation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;사운드 제어 이벤트 관련 및 forEach / this에 조금 더 익숙해지기 위해서 만들어보았다.&lt;/p&gt;
+
+&lt;p&gt;여기서 HTMLCollection을 제어할 수 있는 Attribute인 data-name에 대해서 알게 됐고,&lt;/p&gt;
+
+&lt;p&gt;HTML상의 div와 audio의 라벨을 바인딩함으로 div의 클릭 이벤트가 발생할 때, 바인딩 된 audio를 재생하게 했다.&lt;/p&gt;
+
+&lt;p&gt;추가적으로 audio.duration을 활용, 남은 시간을 텍스트로 띄우고, 인터벌로 매초마다 업데이트하게 설정하였다.&lt;/p&gt;
+
+&lt;p&gt;난항을 겪었던 부분은 다중재생이었는데, 다른 오디오가 재생중일 때에는 클릭 이벤트가 발생하지 않도록(혹은 발생하면 현재 플레이하는 오디오를 멈추고 타 오디오를 재생하도록) 하고 싶었다.&lt;/p&gt;
+
+&lt;p&gt;기능 구현 자체는 성공했는데, 문제는 2번 이상의 이벤트가 발생했을 때 재생/정지버튼이 정상작동을 안한다는 것이었다.&lt;/p&gt;
+
+&lt;p&gt;별로 맘에 들지는 않는데, 추후 다시 고쳐봐야겠다. 아직은 어떤 식으로 접근해야하는지 잘 모르겠다.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">화이트 노이즈 어플을 만들어 보았다.</summary></entry><entry><title type="html">화살표 함수(Arrow Function) 기초</title><link href="http://localhost:4000/arrow-function/" rel="alternate" type="text/html" title="화살표 함수(Arrow Function) 기초" /><published>2021-01-27T23:45:36+09:00</published><updated>2021-01-27T23:45:36+09:00</updated><id>http://localhost:4000/arrow-function</id><content type="html" xml:base="http://localhost:4000/arrow-function/">&lt;p&gt;ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서&lt;/p&gt;
 
 &lt;h1 id=&quot;화살표-함수arrow-function&quot;&gt;화살표 함수(Arrow Function)&lt;/h1&gt;
 
@@ -82,23 +319,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;Arrow function expressions MDN&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서</summary></entry><entry><title type="html">화이트 노이즈 어플리케이션</title><link href="http://localhost:4000/meditation-app/" rel="alternate" type="text/html" title="화이트 노이즈 어플리케이션" /><published>2021-01-27T23:45:36+09:00</published><updated>2021-01-27T23:45:36+09:00</updated><id>http://localhost:4000/meditation-app</id><content type="html" xml:base="http://localhost:4000/meditation-app/">&lt;p&gt;화이트 노이즈 어플을 만들어 보았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/meditation.png&quot; alt=&quot;meditation&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;사운드 제어 이벤트 관련 및 forEach / this에 조금 더 익숙해지기 위해서 만들어보았다.&lt;/p&gt;
-
-&lt;p&gt;여기서 HTMLCollection을 제어할 수 있는 Attribute인 data-name에 대해서 알게 됐고,&lt;/p&gt;
-
-&lt;p&gt;HTML상의 div와 audio의 라벨을 바인딩함으로 div의 클릭 이벤트가 발생할 때, 바인딩 된 audio를 재생하게 했다.&lt;/p&gt;
-
-&lt;p&gt;추가적으로 audio.duration을 활용, 남은 시간을 텍스트로 띄우고, 인터벌로 매초마다 업데이트하게 설정하였다.&lt;/p&gt;
-
-&lt;p&gt;난항을 겪었던 부분은 다중재생이었는데, 다른 오디오가 재생중일 때에는 클릭 이벤트가 발생하지 않도록(혹은 발생하면 현재 플레이하는 오디오를 멈추고 타 오디오를 재생하도록) 하고 싶었다.&lt;/p&gt;
-
-&lt;p&gt;기능 구현 자체는 성공했는데, 문제는 2번 이상의 이벤트가 발생했을 때 재생/정지버튼이 정상작동을 안한다는 것이었다.&lt;/p&gt;
-
-&lt;p&gt;별로 맘에 들지는 않는데, 추후 다시 고쳐봐야겠다. 아직은 어떤 식으로 접근해야하는지 잘 모르겠다.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">화이트 노이즈 어플을 만들어 보았다.</summary></entry><entry><title type="html">CSS 레이아웃 연습</title><link href="http://localhost:4000/CSS-practice/" rel="alternate" type="text/html" title="CSS 레이아웃 연습" /><published>2021-01-25T23:45:36+09:00</published><updated>2021-01-25T23:45:36+09:00</updated><id>http://localhost:4000/CSS-practice</id><content type="html" xml:base="http://localhost:4000/CSS-practice/">&lt;p&gt;최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서</summary></entry><entry><title type="html">CSS 레이아웃 연습</title><link href="http://localhost:4000/CSS-practice/" rel="alternate" type="text/html" title="CSS 레이아웃 연습" /><published>2021-01-25T23:45:36+09:00</published><updated>2021-01-25T23:45:36+09:00</updated><id>http://localhost:4000/CSS-practice</id><content type="html" xml:base="http://localhost:4000/CSS-practice/">&lt;p&gt;최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/1week.png&quot; alt=&quot;weekData&quot; /&gt;&lt;/p&gt;
 
@@ -134,23 +355,7 @@
 
 &lt;p&gt;어떻게 구현하는건지 알게 되서 기쁘다.&lt;/p&gt;
 
-&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/todopreview.png&quot; alt=&quot;todo&quot; /&gt;
-내가 좋아하는 노마드코더 니꼬가 말하길, 투두리스트가 자바스크립트 계의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world&lt;/code&gt;라고 한다.&lt;/p&gt;
-
-&lt;p&gt;마침 관련한 튜토리얼이 있어 만들어봤다. 기초 중의 기초인 Date 표시부터, 로컬스토리지를 이용한 유저네임과 투두리스트의 보존이 메인이다.&lt;/p&gt;
-
-&lt;p&gt;어려움을 겪었던 부분은 로컬스토리지에 저장된 오브젝트를 다시 문자열로 파싱하여 실제 HTML 엘리멘트로 변환시키는게 아니었나 싶다.&lt;/p&gt;
-
-&lt;p&gt;추가적으로 무료 api를 이용하여 날씨 정보를 받아오는 기능이 있는데, 질 좋은 api를 제공해주더라도 거기서 내가 필요한 데이터를 뽑아 원하는 형태로 변경시키는 것도 만만찮다는 것을 새삼 깨달았다.
-맘같아선 기온 뿐만 아니라 현재 기상상태 정보를 불러와 해당 기상상태의 아이콘도 같이 띄우고 싶었으나, 귀찮아서 패스했다.&lt;/p&gt;
-
-&lt;p&gt;여기서 확인해볼 수 있다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/hyper-todolist&quot;&gt;HyperToDo&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat-app/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat-app</id><content type="html" xml:base="http://localhost:4000/pop-cat-app/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
+&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat-app/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat-app</id><content type="html" xml:base="http://localhost:4000/pop-cat-app/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/popcat.gif&quot; alt=&quot;popcat.gif&quot; /&gt;&lt;/p&gt;
 
@@ -167,7 +372,23 @@
 &lt;p&gt;여기서 해볼 수 있다.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/pop-cat&quot;&gt;POPCAT!&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/todopreview.png&quot; alt=&quot;todo&quot; /&gt;
+내가 좋아하는 노마드코더 니꼬가 말하길, 투두리스트가 자바스크립트 계의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world&lt;/code&gt;라고 한다.&lt;/p&gt;
+
+&lt;p&gt;마침 관련한 튜토리얼이 있어 만들어봤다. 기초 중의 기초인 Date 표시부터, 로컬스토리지를 이용한 유저네임과 투두리스트의 보존이 메인이다.&lt;/p&gt;
+
+&lt;p&gt;어려움을 겪었던 부분은 로컬스토리지에 저장된 오브젝트를 다시 문자열로 파싱하여 실제 HTML 엘리멘트로 변환시키는게 아니었나 싶다.&lt;/p&gt;
+
+&lt;p&gt;추가적으로 무료 api를 이용하여 날씨 정보를 받아오는 기능이 있는데, 질 좋은 api를 제공해주더라도 거기서 내가 필요한 데이터를 뽑아 원하는 형태로 변경시키는 것도 만만찮다는 것을 새삼 깨달았다.
+맘같아선 기온 뿐만 아니라 현재 기상상태 정보를 불러와 해당 기상상태의 아이콘도 같이 띄우고 싶었으나, 귀찮아서 패스했다.&lt;/p&gt;
+
+&lt;p&gt;여기서 확인해볼 수 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/hyper-todolist&quot;&gt;HyperToDo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
 
 &lt;hr /&gt;
 

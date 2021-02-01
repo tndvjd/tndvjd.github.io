@@ -1,0 +1,591 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>플러터 사용 후기 및 스위프트 전향 - 성장하는 개발자, 하멍 기록장</title>
+<meta name="description" content="리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기">
+
+
+  <meta name="author" content="Hyperidiot">
+  
+  <meta property="article:author" content="Hyperidiot">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="성장하는 개발자, 하멍 기록장">
+<meta property="og:title" content="플러터 사용 후기 및 스위프트 전향">
+<meta property="og:url" content="http://localhost:4000/flutter-testimonial/">
+
+
+  <meta property="og:description" content="리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-01T23:00:36+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/flutter-testimonial/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Hyperidiot",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="성장하는 개발자, 하멍 기록장 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hyperblog
+          <span class="site-subtitle">Version 1.0 - 지속적 업데이트 예정</span>
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">플러터 사용 후기 및 스위프트 전향</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+        <a href="https://tndvjd.github.io/">
+          <img src="/assets/images/typing_cat.gif" alt="Hyperidiot" itemprop="image">
+        </a>
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Hyperidiot</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Just New in Develop field, Want to be Digital Nomad</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">More</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Korea | Japan</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://tndvjd.github.io/pop-cat/index.html" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Popcat meme</span></a></li>
+          
+        
+          
+            <li><a href="https://lolmbti.netlify.app/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">LOL MBTI</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/tndvjd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/hyperidiot__" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:tndvjd@gmail.com">
+            <meta itemprop="email" content="tndvjd@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="플러터 사용 후기 및 스위프트 전향">
+    <meta itemprop="description" content="리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기">
+    <meta itemprop="datePublished" content="2021-02-01T23:00:36+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">플러터 사용 후기 및 스위프트 전향
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기</p>
+
+<p>당초 내가 개발을 시작한 목적은 앱 개발이었고, 프로그래밍 전반적인 지식이 전무한 상태에서 시작 언어로 많이 추천들 하는게 JS더라.</p>
+
+<p>자바스크립트는 기본적으로 웹 브라우저에서 구동되는 프로그래밍 언어이고, 자연스레 웹 공부를 하게 됐었는데, 결과물이 조금씩 나올 때마다 뿌듯함도 있었으나,</p>
+
+<p>빨리 앱 개발을 해보고 싶다는 생각이 조금씩 강해졌다.</p>
+
+<p>그래서 RN이라는 프레임워크를 알게 되고 깔짝대봤다.</p>
+
+<p>RN은 아무래도 JS 기반이다 보니 이해하기 조금 수월했고, 이런 크로스플랫폼 프레임워크를 찾다 보니 비슷한 성격을 가지고 있는게 플러터라는 사실을 알게 됐다.</p>
+
+<p>플러터와 RN의 비교분석을 보다 보니, RN은 자바스크립트 브리지라는걸 이용해서 화면을 그리지만, 플러터는 C계열로 컴파일하여 안정적 네이티브 성능을 낸다는 차이점이 있었다.</p>
+
+<p>무엇보다 킹 구글에서 밀어준다는 프레임워크라는게…</p>
+
+<p>성능상의 우위가 있다고 하니, 내가 만들 앱이 헤비한 앱이 아니더라도 추후를 위해 한번쯤 맛봐볼까 하고 시작했던 게 계기.</p>
+
+<p>근데 이틀정도 공부해보고 바로 포기했다.</p>
+
+<p>이 코드를 보라..</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="nl">body:</span> <span class="n">Padding</span><span class="o">(</span>
+        <span class="nl">padding:</span> <span class="n">EdgeInsets</span><span class="o">.</span><span class="na">fromLTRB</span><span class="o">(</span><span class="mi">30</span><span class="o">,</span> <span class="mf">40.0</span><span class="o">,</span> <span class="mf">0.0</span><span class="o">,</span> <span class="mf">0.0</span><span class="o">),</span>
+        <span class="nl">child:</span> <span class="n">Column</span><span class="o">(</span>
+          <span class="nl">crossAxisAlignment:</span> <span class="n">CrossAxisAlignment</span><span class="o">.</span><span class="na">start</span><span class="o">,</span>
+          <span class="nl">children:</span> <span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;[</span>
+            <span class="n">Center</span><span class="o">(</span>
+              <span class="nl">child:</span> <span class="n">CircleAvatar</span><span class="o">(</span>
+                <span class="nl">backgroundImage:</span> <span class="n">AssetImage</span><span class="o">(</span><span class="s">'assets/bio-pic.jpg'</span><span class="o">),</span>
+                <span class="nl">radius:</span> <span class="mi">80</span><span class="o">,</span>
+              <span class="o">),</span>
+            <span class="o">),</span>
+            <span class="n">Divider</span><span class="o">(</span>
+              <span class="nl">height:</span> <span class="mi">60</span><span class="o">,</span>
+              <span class="nl">color:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">grey</span><span class="o">[</span><span class="mi">850</span><span class="o">],</span>
+              <span class="nl">thickness:</span> <span class="mf">0.5</span><span class="o">,</span>
+              <span class="nl">endIndent:</span> <span class="mi">30</span><span class="o">,</span>
+            <span class="o">),</span>
+            <span class="n">Text</span><span class="o">(</span>
+              <span class="s">'NAME'</span><span class="o">,</span>
+              <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span>
+                <span class="nl">color:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="o">,</span>
+                <span class="nl">letterSpacing:</span> <span class="mf">2.0</span><span class="o">,</span>
+              <span class="o">),</span>
+            <span class="o">),</span>
+            <span class="n">SizedBox</span><span class="o">(</span>
+              <span class="nl">height:</span> <span class="mf">10.0</span><span class="o">,</span>
+            <span class="o">),</span>
+            <span class="n">Text</span><span class="o">(</span>
+              <span class="s">'HYPERIDIOT'</span><span class="o">,</span>
+              <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span>
+                  <span class="nl">color:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="o">,</span>
+                  <span class="nl">letterSpacing:</span> <span class="mf">2.0</span><span class="o">,</span>
+                  <span class="nl">fontSize:</span> <span class="mf">28.0</span><span class="o">,</span>
+                  <span class="nl">fontWeight:</span> <span class="n">FontWeight</span><span class="o">.</span><span class="na">bold</span><span class="o">),</span>
+            <span class="o">),</span>
+            <span class="n">SizedBox</span><span class="o">(</span>
+              <span class="nl">height:</span> <span class="mf">30.0</span><span class="o">,</span>
+            <span class="o">),</span>
+            <span class="n">Text</span><span class="o">(</span>
+              <span class="s">'YOUR SKILL LEVEL'</span><span class="o">,</span>
+              <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span>
+                <span class="nl">color:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="o">,</span>
+                <span class="nl">letterSpacing:</span> <span class="mf">2.0</span><span class="o">,</span>
+              <span class="o">),</span>
+            <span class="o">),</span>
+            <span class="n">SizedBox</span><span class="o">(</span>
+              <span class="nl">height:</span> <span class="mf">10.0</span><span class="o">,</span>
+            <span class="o">),</span>
+            <span class="n">Text</span><span class="o">(</span>
+              <span class="s">'BEGINNER'</span><span class="o">,</span>
+              <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span>
+                  <span class="nl">color:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="o">,</span>
+                  <span class="nl">letterSpacing:</span> <span class="mf">2.0</span><span class="o">,</span>
+                  <span class="nl">fontSize:</span> <span class="mf">28.0</span><span class="o">,</span>
+                  <span class="nl">fontWeight:</span> <span class="n">FontWeight</span><span class="o">.</span><span class="na">bold</span><span class="o">),</span>
+            <span class="o">),</span>
+            <span class="n">SizedBox</span><span class="o">(</span>
+              <span class="nl">height:</span> <span class="mf">30.0</span><span class="o">,</span>
+            <span class="o">),</span>
+            <span class="n">Row</span><span class="o">(</span>
+              <span class="nl">children:</span> <span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;[</span>
+                <span class="n">Icon</span><span class="o">(</span><span class="n">Icons</span><span class="o">.</span><span class="na">check_circle_outline</span><span class="o">),</span>
+                <span class="n">SizedBox</span><span class="o">(</span><span class="nl">width:</span> <span class="mf">10.0</span><span class="o">),</span>
+                <span class="n">Text</span><span class="o">(</span>
+                  <span class="s">'Learning OOP'</span><span class="o">,</span>
+                  <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span><span class="nl">fontSize:</span> <span class="mi">16</span><span class="o">,</span> <span class="nl">letterSpacing:</span> <span class="mf">1.0</span><span class="o">),</span>
+                <span class="o">),</span>
+              <span class="o">],</span>
+            <span class="o">),</span>
+            <span class="n">Row</span><span class="o">(</span>
+              <span class="nl">children:</span> <span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;[</span>
+                <span class="n">Icon</span><span class="o">(</span><span class="n">Icons</span><span class="o">.</span><span class="na">check_circle_outline</span><span class="o">),</span>
+                <span class="n">SizedBox</span><span class="o">(</span><span class="nl">width:</span> <span class="mf">10.0</span><span class="o">),</span>
+                <span class="n">Text</span><span class="o">(</span>
+                  <span class="s">'Passion'</span><span class="o">,</span>
+                  <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span><span class="nl">fontSize:</span> <span class="mi">16</span><span class="o">,</span> <span class="nl">letterSpacing:</span> <span class="mf">1.0</span><span class="o">),</span>
+                <span class="o">),</span>
+              <span class="o">],</span>
+            <span class="o">),</span>
+            <span class="n">Row</span><span class="o">(</span>
+              <span class="nl">children:</span> <span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;[</span>
+                <span class="n">Icon</span><span class="o">(</span><span class="n">Icons</span><span class="o">.</span><span class="na">check_circle_outline</span><span class="o">),</span>
+                <span class="n">SizedBox</span><span class="o">(</span><span class="nl">width:</span> <span class="mf">10.0</span><span class="o">),</span>
+                <span class="n">Text</span><span class="o">(</span>
+                  <span class="s">'Creativity'</span><span class="o">,</span>
+                  <span class="nl">style:</span> <span class="n">TextStyle</span><span class="o">(</span><span class="nl">fontSize:</span> <span class="mi">16</span><span class="o">,</span> <span class="nl">letterSpacing:</span> <span class="mf">1.0</span><span class="o">),</span>
+                <span class="o">),</span>
+              <span class="o">],</span>
+            <span class="o">),</span>
+          <span class="o">],</span>
+        <span class="o">),</span>
+      <span class="o">),</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>HTML 태그를 작성하고, 인라인 스타일로 스타일링을 하는 느낌을 강하게 받았는데, 
+텍스트 한줄 입력하기 위해 들여야 하는 노력이 너무 컸다고 느껴졌다.
+RN이 오히려 스타일링과 요소부분을 구별 가능해서 낫다고 생각이 들 정도였다.</p>
+
+<p>아.. RN도 그렇고, 플러터도 그렇고, 앱 개발은 이런 플로우로 개발을 하는건가? 라는 생각이 문득 들었고, RN할 때 깔아둔 안드로이드 스튜디오, 그리고 엑스코드는 어떤 식으로 화면을 그리는 지 궁금했다.</p>
+
+<p>근데 찾아보니까 신세계더라.</p>
+
+<p>역시 풀네이티브라 그런지, 화면을 그리는 것에 대해서는 훨씬 직관적이게 되어 있었다.</p>
+
+<p>다만 안스나 엑스코드를 고른다는 건, 택일을 해야한다는 의미였다. 살짝 망설였으나, 내 안에서 답을 찾았고 스위프트를 선택하게 됐다.</p>
+
+<p>내가 안드로이드 개발을 할지 iOS 개발을 할지의 기로에서 iOS를 선택한 이유는 간단했다.</p>
+
+<p>내가 앱등이니까. 난 내가 쓰고싶다고 느낄 만한 앱을 우선 만들어 보고 싶으니까.</p>
+
+<p>이렇게 스위프트를 골랐으니 공부를 해야하는데,</p>
+
+<p>세상에, 프로그래밍 처음 배울때랑 다른 게 없다. 아주 일부의 개념만 이해되고, Optional이라는 스위프트 고유의 개념을 포함하여 거의 대부분을 다 처음 배워야 했다.</p>
+
+<p>심지어 안드로이드처럼 이용 풀이 넓은게 아니라 자료도 비교적 부족한 느낌적인 느낌? ㅜㅜ</p>
+
+<p>심지어 잘 정리된 건 영문이 많은데, 웹은 워낙 방대해서 국문으로 된 양질의 자료가 매우 많았으나…</p>
+
+<p>스위프트의 경우는 버전이 바뀌면서 거의 대격변이라고 할 정도의 변화가 있었던 것 같은데, 국내강의 대부분 자료가 Outdated된 상태였다(스위프트 2 기준이라던지)</p>
+
+<p>최근 자료는 대부분 영문이었다. ㅠㅠ 사실 영어 레퍼런스를 많이 봐야한다는 생각이 들면서도, 뭔가 문제에 직면했을 때 스택오버플로에 나온 글만 읽었으니 크게 영어실력 향상은 없던 듯 한데..</p>
+
+<p>이번 기회에 영어도 같이 공부할 겸 개발 영어랑 좀 친해져봐야겠다.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-02-01T23:00:36+09:00">February 1, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/function-hoisting/" class="pagination--pager" title="함수 표현식과 함수 선언문의 차이
+">이전 글</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음 글</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>More:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:tndvjd@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+        
+      
+        
+          <li><a href="https://lolmbti.netlify.app/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> LOL MBTI</a></li>
+        
+      
+        
+          <li><a href="https://github.com/tndvjd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/hyperidiot__" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Hyperidiot. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
