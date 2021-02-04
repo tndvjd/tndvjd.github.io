@@ -41,6 +41,10 @@
 <lastmod>2021-02-01T23:00:36+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/xcode-start/</loc>
+<lastmod>2021-02-04T22:27:36+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -48,5 +52,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>

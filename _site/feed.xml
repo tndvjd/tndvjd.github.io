@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-01T23:59:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">플러터 사용 후기 및 스위프트 전향</title><link href="http://localhost:4000/flutter-testimonial/" rel="alternate" type="text/html" title="플러터 사용 후기 및 스위프트 전향" /><published>2021-02-01T23:00:36+09:00</published><updated>2021-02-01T23:00:36+09:00</updated><id>http://localhost:4000/flutter-testimonial</id><content type="html" xml:base="http://localhost:4000/flutter-testimonial/">&lt;p&gt;리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-05T01:28:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">엑스코드 공부</title><link href="http://localhost:4000/xcode-start/" rel="alternate" type="text/html" title="엑스코드 공부" /><published>2021-02-04T22:27:36+09:00</published><updated>2021-02-04T22:27:36+09:00</updated><id>http://localhost:4000/xcode-start</id><content type="html" xml:base="http://localhost:4000/xcode-start/">&lt;p&gt;iOS 어플을 만들기 위한 애플의 IDE, XCode 공부일기&lt;/p&gt;
+
+&lt;p&gt;잘 하지도 못하는 영어.. 조금씩 글 읽어가면서 엑스코드는 어떻게 쓰는거고, 스위프트는 어떤 언어인지 조금씩 보고 있다.&lt;/p&gt;
+
+&lt;p&gt;우선 UI를 그리는 방법이 크게 두가지가 있었는데, 하나는 UIKit, 나머지는 SwiftUI 라는 놈이다.&lt;/p&gt;
+
+&lt;p&gt;전자의 경우는 전통적인 방법이라고 할 수 있겠다. 후자는 비교적 최근에 나온(2019년 등장) 놈이고, 앞으로 애플에서 짱짱하게 밀어줄 것 처럼 보인다.&lt;/p&gt;
+
+&lt;p&gt;당연히 후자를 배워야할 듯 하나, SwfitUI의 경우에는 iOS 13 이상의 버전부터 지원을 한다더라. 사실 웹에서도 브라우저 호환을 당연히 생각하듯, 모바일 개발에서도 폭넓은 이용자층을 구성하기 위해서는 다양한 기기에서 작동해야하는게 기본 전제조건일 것이다.&lt;/p&gt;
+
+&lt;p&gt;시간이 지나고 이 장벽도 낮아진다면 SwiftUI로 이동해도 무관하겠으나, 아직은 시기상조인 듯 하다. 기존 iOS 앱들도 대부분 SwiftUI로 이주하지 못하는 이유기도 하다.&lt;/p&gt;
+
+&lt;p&gt;그래서 우선 UIKit을 공부중인데, 이 스토리보드라는 놈이 참 재미있다. 그냥 내가 원하는 UI 컴포넌트를 화면에 띄우고 내용을 적기만 하면 된다.&lt;/p&gt;
+
+&lt;p&gt;피그마나 스케치, Adobe XD같은거 잘 만지는 사람은 아주 익숙할 듯 하다. 포토샵이랑 비교하기에는 각 좌표를 설정해줘야 한다는 점에서 약간 상이한 점이 있는 것 같다.&lt;/p&gt;
+
+&lt;p&gt;HTML, CSS로 한땀한땀 코드로 컴포넌트를 그리는 것과는 비교가 안될 정도로 편하고 재밌어서(?) 그냥 스케치 툴 만지듯 UI를 이것저것 그려보기도 했다.&lt;/p&gt;
+
+&lt;p&gt;근데 아니나 다를까 기기별로 보여지는 화면이 다르다 ㅠㅠ 오토레이아웃이 이 문제를 해결해줄 수 있다고 하는데, 아직 잘 못다루겠다.&lt;/p&gt;
+
+&lt;p&gt;뷰와 컨트롤러를 연결하는 방식도 애플답게 참 직관적으로 해놨다. 그냥 드래그 앤 드롭으로 해당 컴포넌트에 동작을 부여할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;앞으로 갈 길이 멀다.. 하필 지금은 또 퇴사하고 이사한답시고 이것저것 준비중이라 바빠서 잘 신경 못 쓰는 것도 있다.&lt;/p&gt;
+
+&lt;p&gt;뭐, 열심히 해봐야지.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">iOS 어플을 만들기 위한 애플의 IDE, XCode 공부일기</summary></entry><entry><title type="html">플러터 사용 후기 및 스위프트 전향</title><link href="http://localhost:4000/flutter-testimonial/" rel="alternate" type="text/html" title="플러터 사용 후기 및 스위프트 전향" /><published>2021-02-01T23:00:36+09:00</published><updated>2021-02-01T23:00:36+09:00</updated><id>http://localhost:4000/flutter-testimonial</id><content type="html" xml:base="http://localhost:4000/flutter-testimonial/">&lt;p&gt;리액트 네이티브와 같은 선상에 서있는 크로스플랫폼 프레임워크, 플러터를 잠깐 맛보고 스위프트로 전향하게 된 일기&lt;/p&gt;
 
 &lt;p&gt;당초 내가 개발을 시작한 목적은 앱 개발이었고, 프로그래밍 전반적인 지식이 전무한 상태에서 시작 언어로 많이 추천들 하는게 JS더라.&lt;/p&gt;
 
@@ -622,6 +646,4 @@ RN이 오히려 스타일링과 요소부분을 구별 가능해서 낫다고 �
       &lt;td&gt;&lt;img src=&quot;https://smilecounter.com/images/item/8.gif&quot; alt=&quot;alt&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">본격적인 첫 포스팅을 위해서, 마크다운에 관해 앞서 설명하고자 한다.</summary></entry><entry><title type="html">First Post</title><link href="http://localhost:4000/first-article/" rel="alternate" type="text/html" title="First Post" /><published>2021-01-18T16:21:36+09:00</published><updated>2021-01-18T16:21:36+09:00</updated><id>http://localhost:4000/first-article</id><content type="html" xml:base="http://localhost:4000/first-article/">&lt;p&gt;어제 한 5시간 내내 깃허브 블로그 구축을 위해 씨름을 했는데 드디어 &lt;strong&gt;성공&lt;/strong&gt;했으므로 자축&amp;amp;정상작동 확인용으로 첫 포스팅을 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll&lt;/a&gt;은 정말 설명 잘 해줬는데 내 컴퓨터가 m1칩이라 그런진 몰라도 에러를 계속 뿜길래 정말 좌절할 뻔 했다..&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">어제 한 5시간 내내 깃허브 블로그 구축을 위해 씨름을 했는데 드디어 성공했으므로 자축&amp;amp;정상작동 확인용으로 첫 포스팅을 한다.</summary></entry></feed>
+&lt;/table&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">본격적인 첫 포스팅을 위해서, 마크다운에 관해 앞서 설명하고자 한다.</summary></entry></feed>

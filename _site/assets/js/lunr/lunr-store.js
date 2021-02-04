@@ -58,4 +58,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/flutter-testimonial/",
         "teaser": null
+      },{
+        "title": "엑스코드 공부",
+        "excerpt":"iOS 어플을 만들기 위한 애플의 IDE, XCode 공부일기 잘 하지도 못하는 영어.. 조금씩 글 읽어가면서 엑스코드는 어떻게 쓰는거고, 스위프트는 어떤 언어인지 조금씩 보고 있다. 우선 UI를 그리는 방법이 크게 두가지가 있었는데, 하나는 UIKit, 나머지는 SwiftUI 라는 놈이다. 전자의 경우는 전통적인 방법이라고 할 수 있겠다. 후자는 비교적 최근에 나온(2019년 등장) 놈이고,...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/xcode-start/",
+        "teaser": null
       }]
