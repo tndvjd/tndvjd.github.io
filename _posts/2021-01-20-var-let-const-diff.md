@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "var 사용을 지양해야하는 까닭"
 toc: true
 author_profile: true

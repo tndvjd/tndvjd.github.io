@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "플러터 사용 후기 및 스위프트 전향"
 date: 2021-02-01 23:00:36 +0900
 author_profile: true

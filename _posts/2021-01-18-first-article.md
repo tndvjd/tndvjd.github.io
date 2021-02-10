@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "First Post"
 date: 2021-01-18 16:21:36 +0900
 author_profile: true

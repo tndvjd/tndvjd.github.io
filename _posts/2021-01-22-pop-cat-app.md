@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "Pop Cat meme 애플리케이션"
 date: 2021-01-22 23:45:36 +0900
 author_profile: true

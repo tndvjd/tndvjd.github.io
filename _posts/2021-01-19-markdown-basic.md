@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "마크다운 사용법"
 toc: true
 author_profile: true

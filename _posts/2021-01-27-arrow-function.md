@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "화살표 함수(Arrow Function) 기초"
 date: 2021-01-27 23:45:36 +0900
 author_profile: true

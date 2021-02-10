@@ -1,0 +1,640 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>스위프트 타입 옵셔널 기초 개념 - 성장하는 개발자, 하멍 기록장</title>
+<meta name="description" content="스위프트 기본 문법 - 옵셔널에 대해서(기초개념)">
+
+
+  <meta name="author" content="Hyperidiot">
+  
+  <meta property="article:author" content="Hyperidiot">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="성장하는 개발자, 하멍 기록장">
+<meta property="og:title" content="스위프트 타입 옵셔널 기초 개념">
+<meta property="og:url" content="http://localhost:4000/swift-optional-basic/">
+
+
+  <meta property="og:description" content="스위프트 기본 문법 - 옵셔널에 대해서(기초개념)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-10T22:00:36+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/swift-optional-basic/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Hyperidiot",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="성장하는 개발자, 하멍 기록장 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--archive wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hyperblog
+          <span class="site-subtitle">Version 1.0 - 지속적 업데이트 예정</span>
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">스위프트 타입 옵셔널 기초 개념</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+        <a href="https://tndvjd.github.io/">
+          <img src="/assets/images/typing_cat.gif" alt="Hyperidiot" itemprop="image">
+        </a>
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Hyperidiot</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Just New in Develop field, Want to be Digital Nomad</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">More</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Korea | Japan</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://tndvjd.github.io/pop-cat/index.html" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Popcat meme</span></a></li>
+          
+        
+          
+            <li><a href="https://lolmbti.netlify.app/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">LOL MBTI</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/tndvjd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/hyperidiot__" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:tndvjd@gmail.com">
+            <meta itemprop="email" content="tndvjd@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">스위프트 타입 옵셔널 기초 개념</h1>
+    
+    <p>스위프트 기본 문법 - 옵셔널에 대해서(기초개념)</p>
+
+<h2 id="옵셔널optional">옵셔널(Optional)</h2>
+
+<p>옵셔널은 스위프트 입문자에게 충공깽을 선물하며 나가떨어지게 해주는 문지기다. 나도 그렇다. 그래서 공부한 내용을 정리를 좀 해보고자 글을 쓴다.<br /></p>
+
+<p>굉장히 생소한 개념이고 이해도 잘 안된다. 양자역학마냥 값이 있을 수도 있고, 없을 수도 있다라는 것을 표기할 때 나타낸다. 슈뢰딩거의 고양이냐?<br /></p>
+
+<p>하지만 스위프트에서 매우 중요한 역할을 담당하므로 정상적으로 코드 작성을 하기 위해서는 꼭 넘어야 하는 산임은 분명하다.</p>
+
+<hr />
+
+<ul>
+  <li>옵셔널은 타입 어노테이션 시, 기본 자료형(Character, String, Int, Float, Double, etc..) 뒤에 ?나 !를 붙여서 표기할 수 있다.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">// Int</span>
+<span class="nf">print</span><span class="p">(</span><span class="kt">Optional</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1">// Int? &lt;&lt;&lt; 얘가 옵셔널</span>
+
+<span class="k">var</span> <span class="nv">someInt</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span><span class="c1">// Int</span>
+<span class="k">var</span> <span class="nv">someOptionalInt</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span><span class="c1">// Int?</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">someInt</span><span class="p">)</span> <span class="c1">// 10</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">someOptionalInt</span><span class="p">)</span> <span class="c1">// Optional(10)</span>
+</code></pre></div></div>
+
+<p>각 값을 콘솔에 찍어보면 옵셔널은 값에 옵셔널임을 명시하고 괄호 안에 값이 출력됨을 알 수 있다.<br />
+옵셔널은 일반적인 형태로 변환해주지 않으면 멀쩡하게 사용할 수가 없다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">myNumber</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> 
+<span class="c1">//  error: value of optional type 'Int?' must be unwrapped to a value of type 'Int'</span>
+</code></pre></div></div>
+
+<p>옵셔널의 가장 큰 특징은 값이 있을 수도 있고, 없을 수도 있다는 것이다.</p>
+<ul>
+  <li>옵셔널이 아닌 기본 자료형은 nil 값을 가질 수 없다.
+선언만 이루어지고 초기값이 주어지지 않은 상태에서 각 변수를 호출하면 그 차이를 쉽게 알 수 있다.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myNumber</span><span class="p">:</span> <span class="kt">Int</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">myNumber</span><span class="p">)</span> <span class="c1">// Error, initialize 되지 않았음</span>
+
+<span class="k">var</span> <span class="nv">myOptionalNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">myOptionalNumber</span><span class="p">)</span> <span class="c1">// nil</span>
+</code></pre></div></div>
+
+<p>마찬가지로, 옵셔널이 아닌 변수에 nil을 할당하려고 시도해도 오류가 발생한다. 하지만 옵셔널 값은 nil을 할당할 수 있다.(값이 없을 수 있기 때문에)</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myNumber</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">myNumber</span> <span class="o">=</span> <span class="kc">nil</span> <span class="c1">// 'nil' cannot be assigned to type 'Int'</span>
+
+<span class="k">var</span> <span class="nv">myOptionalNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">myOptionalNumber</span> <span class="o">=</span> <span class="kc">nil</span> <span class="c1">// nil</span>
+</code></pre></div></div>
+
+<ul>
+  <li>옵셔널은 값이 반환될 때 오류가 발생할 가능성이 있는 경우에 사용된다.
+예를 들어서 String 타입의 값을 Int형으로 새로 생성할 때의 코드를 보자.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">stringNumToInt</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="s">"100"</span><span class="p">)</span> <span class="c1">// Optional(100)</span>
+<span class="k">var</span> <span class="nv">stringStrToInt</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="s">"Hi"</span><span class="p">)</span> <span class="c1">// nil</span>
+</code></pre></div></div>
+
+<p>여기서 <code class="language-plaintext highlighter-rouge">Int()</code>의 타입을 확인해보면 옵셔널이다. 왜 그럴까?<br />
+<code class="language-plaintext highlighter-rouge">Int("Hi")</code>의 출력 값을 보면 알겠지만, 정수로 반환될 수 없는 값이 들어올 수 있는 가능성을 내포하고 있기 때문이다.</p>
+
+<h2 id="옵셔널의-용도">옵셔널의 용도</h2>
+
+<ul>
+  <li>옵셔널 타입은 변수/상수에 아무런 값이 할당되지 않는 상황을 안전하게 처리하기 위한 방법을 제공한다.</li>
+</ul>
+
+<h2 id="옵셔널-값을-일반형태로-변환시키기">옵셔널 값을 일반형태로 변환시키기</h2>
+
+<ul>
+  <li>옵셔널 변수에 값이 있으면 옵셔널로 래핑되었다(Wrapped)고 표현한다.</li>
+  <li>옵셔널에 래핑된 값은 몇가지 방법을 통하여 언래핑할 수 있다.</li>
+</ul>
+
+<h3 id="강제-언래핑forced-unwrapping">강제 언래핑(Forced Unwrapping)</h3>
+
+<p>강제 언래핑은 옵셔널 값에 !를 붙이면 된다. 매우 간단하다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">x</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="c1">// 옵셔널 정수형 변수 x 선언</span>
+<span class="k">var</span> <span class="nv">y</span> <span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">// Optional(10)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">// Optional(10)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="o">!</span><span class="p">)</span> <span class="c1">// 10 </span>
+<span class="c1">// !을 붙임으로 forced unwrapping이 이루어졌다.(일반 자료형으로 가공됨)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1">// 0</span>
+</code></pre></div></div>
+
+<p>그러나 치명적인 단점이 있다.<br />
+값이 nil인 변수를 강제 언래핑하게 되면, Fatal error를 던지며 프로그램은 죽어버린다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">x</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="c1">// 옵셔널 정수형 변수 x 선언</span>
+<span class="c1">// 초기화가 되지 않았으므로 값은 nil이다.</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">// nil</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="o">!</span><span class="p">)</span> <span class="c1">// 으악! 값이 없어서 벗길 수가 없어요.</span>
+<span class="c1">// Fatal error</span>
+</code></pre></div></div>
+
+<p>따라서 주로 조건문을 활용하여 해당 변수의 값이 nil이 아닌지 확인 후에 강제 언래핑을 하는 경우가 많다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">myOptionalInt</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="c1">// nil</span>
+
+<span class="k">if</span> <span class="n">myOptionalInt</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">myOptionalInt</span><span class="o">!</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">myOptionalInt</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// ---&gt; nil</span>
+
+<span class="k">var</span> <span class="nv">myName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">"Hyperidiot"</span> <span class="c1">// Optional("Hyperidiot")</span>
+
+<span class="k">if</span> <span class="n">myName</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">myName</span><span class="o">!</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">myName</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// ---&gt; "Hyperidiot"</span>
+</code></pre></div></div>
+
+<h3 id="옵셔널-바인딩optional-binding">옵셔널 바인딩(Optional Binding)</h3>
+
+<p>옵셔널 바인딩이란, 옵셔널이 할당된 값을 임시 변수 또는 상수에 할당하여 옵셔널을 언래핑하는 방법이다.<br />
+강제 언래핑보다 안전하고, 옵셔널을 벗기는 가장 보편적인 방법이다. 단 처음에 볼때는 이해가 잘 안될 수 있다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">someConst</span> <span class="o">=</span> <span class="n">optionalName</span> <span class="p">{</span>
+  <span class="c1">// 옵셔널 변수가 값이 있다면 if문의 조건은 true가 됨. </span>
+  <span class="c1">// optionalName의 옵셔널을 언래핑하여 일반 상수 someConst에 대입시키고 if문을 실행시킨다.</span>
+
+  <span class="c1">// 만약 값이 nil이라면 if문의 조건은 false가 되고 조건문은 실행되지 않는다.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>if let 구문 자체는 이렇게 해석하면 되겠다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">optionalName</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+  <span class="n">someConst</span> <span class="o">=</span> <span class="n">optionalName</span><span class="o">!</span>
+  <span class="c1">// someConst에 optionalName이 할당된 이후에 if let 본체 코드가 실행된다.</span>
+  <span class="c1">// *주의* optionalName은 여전히 optional이다. 가공된 값은 someConst에 할당된다.</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="k">return</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>실제 실행 시에는 이런 모습이다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">var</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">// Optional(10)</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">unwrappedX</span> <span class="o">=</span> <span class="n">x</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">unwrappedX</span><span class="p">)</span> <span class="c1">// 10</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="p">}</span>
+<span class="c1">// ---&gt; 10이 출력된다.</span>
+
+<span class="k">var</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="c1">// nil</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">unwrappedY</span> <span class="o">=</span> <span class="n">y</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">unwrappedY</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1">// nil</span>
+<span class="p">}</span>
+<span class="c1">// ---&gt; nil이 출력된다.</span>
+
+</code></pre></div></div>
+
+<h4 id="여러-옵셔널을-동시에-언래핑하기">여러 옵셔널을 동시에 언래핑하기</h4>
+
+<p>여러 옵셔널 변수를 콤마를 통해 동시에 언래핑할 수 있다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">var</span> <span class="nv">person1</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+<span class="k">var</span> <span class="nv">person2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+
+<span class="n">person1</span> <span class="o">=</span> <span class="s">"Chulsu"</span>
+<span class="n">person2</span> <span class="o">=</span> <span class="s">"Minsu"</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">firstPerson</span> <span class="o">=</span> <span class="n">person1</span><span class="p">,</span> <span class="k">let</span> <span class="nv">secondPerson</span> <span class="o">=</span> <span class="n">person2</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">firstPerson</span><span class="se">)</span><span class="s"> : Hello </span><span class="se">\(</span><span class="n">secondPerson</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"nil"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// ---&gt; Chulsu : Hello Minsu!</span>
+
+</code></pre></div></div>
+
+<p>단, 하나라도 nil값이 포함되어 있으면 if문의 조건은 false가 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">var</span> <span class="nv">person1</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+<span class="k">var</span> <span class="nv">person2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+
+<span class="n">person1</span> <span class="o">=</span> <span class="s">"Chulsu"</span>
+<span class="n">person2</span> <span class="o">=</span> <span class="kc">nil</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">firstPerson</span> <span class="o">=</span> <span class="n">person1</span><span class="p">,</span> <span class="k">let</span> <span class="nv">secondPerson</span> <span class="o">=</span> <span class="n">person2</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">firstPerson</span><span class="se">)</span><span class="s"> : Hello </span><span class="se">\(</span><span class="n">secondPerson</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"nil"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// ---&gt; nil</span>
+
+</code></pre></div></div>
+
+<h2 id="암묵적-언래핑implicitly-unwrapping">암묵적 언래핑(Implicitly Unwrapping)</h2>
+
+<p>옵셔널이 항상 유효한 값을 가질 경우(절대 nil이 될 일이 없는 경우)에는 옵셔널이 암묵적으로 언래핑을 하게끔 선언할 수도 있다.<br />
+클래스의 아웃렛 변수 초기화에서 많이 사용된다.(자동 생성되는 코드)</p>
+
+<p>이러한 방법으로 옵셔널이 선언된다면 강제 언래핑이나 옵셔널 바인딩을 하지 않아도 값에 접근할 수 있다.</p>
+
+<p>암묵적 언래핑으로 옵셔널을 선언하기 위해선 선언부에 물음표 대신 느낌표를 사용하면 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">var</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="c1">// 옵셔널 변수 선언방법 1. 이 경우 옵셔널을 벗겨줘야 함</span>
+<span class="k">var</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Int</span><span class="o">!</span> <span class="c1">// 옵셔널 변수 선언방법 2. 암묵적 언래핑이 된다.</span>
+
+</code></pre></div></div>
+
+<p>위에서 말했지만 옵셔널 변수의 값이 nil일 때, 강제 언래핑을 시도하면 Fatal error를 던지며 프로그램이 죽어버린다.
+따라서 절대로 nil이 들어갈 일이 없는 변수에만 암묵적 언래핑을 활용하도록 하는게 좋겠다.</p>
+
+<p>다음 코드를 보면 암묵적 언래핑이 어떤 식으로 이뤄지는지 알 수 있다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">var</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">Int</span><span class="o">!</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">var</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">a</span> <span class="c1">// type annotation이 Optional이 아니기 때문에 암묵적으로 언래핑이 된다.</span>
+<span class="k">var</span> <span class="nv">c</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">a</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">d</span> <span class="o">=</span> <span class="n">a</span> <span class="c1">// type annotation이 없다. 이 경우 a의 자료형을 가져오므로 d는 옵셔널이다.</span>
+<span class="k">var</span> <span class="nv">e</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span> 
+<span class="c1">// 원래 옵셔널과 일반자료형은 연산이 불가능하지만 이 경우 암묵적 언래핑을 수행하여 연산된다.</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="c1">// ---&gt; Optional(1) 1 1 Optional(1) 2</span>
+
+</code></pre></div></div>
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>More:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:tndvjd@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+        
+      
+        
+          <li><a href="https://lolmbti.netlify.app/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> LOL MBTI</a></li>
+        
+      
+        
+          <li><a href="https://github.com/tndvjd/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/hyperidiot__" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Hyperidiot. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

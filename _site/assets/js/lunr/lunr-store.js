@@ -64,4 +64,22 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/xcode-start/",
         "teaser": null
+      },{
+        "title": "스위프트 Range에 대해서",
+        "excerpt":"스위프트의 특별한 자료형 Range에 대해서 스위프트를 공부하다 보니 조금 유별난 자료형을 찾았는데, 바로 range다. 일반적으로 Closed, Half-Open 등으로 나뉘는데, 여러가지 숫자를 한번에 취급할 수 있다는 점에서 튜플 등과 같이 사용했을 때 좋은 듯 하다. let closedRange = 0...10 let halfClosedRange = 0..&lt;10 이런 식으로 표현할 수 있다. 닫힌 레인지는 0에서...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/switch-range/",
+        "teaser": null
+      },{
+        "title": "스위프트 타입 어노테이션과 타입 추론",
+        "excerpt":"스위프트 기본 문법 - 타입 어노테이션과 타입 추론에 대해서 타입 어노테이션과 타입 추론 Swift는 기본적으로 타입 안전(type safe) 프로그래밍 언어이다. Type Safe? 변수의 데이터 타입이 식별되면 그 변수는 다른 타입의 데이터를 저장할 수 없다. 변수가 선언된 후에도 다른 데이터 타입을 입력할 수 있는 느슨한 타입과 대조적임(내가 이전에 공부하던 JS가 이...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/swift-typesafe/",
+        "teaser": null
+      },{
+        "title": "스위프트 타입 옵셔널 기초 개념",
+        "excerpt":"스위프트 기본 문법 - 옵셔널에 대해서(기초개념) 옵셔널(Optional) 옵셔널은 스위프트 입문자에게 충공깽을 선물하며 나가떨어지게 해주는 문지기다. 나도 그렇다. 그래서 공부한 내용을 정리를 좀 해보고자 글을 쓴다. 굉장히 생소한 개념이고 이해도 잘 안된다. 양자역학마냥 값이 있을 수도 있고, 없을 수도 있다라는 것을 표기할 때 나타낸다. 슈뢰딩거의 고양이냐? 하지만 스위프트에서 매우 중요한 역할을...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/swift-optional-basic/",
+        "teaser": null
       }]

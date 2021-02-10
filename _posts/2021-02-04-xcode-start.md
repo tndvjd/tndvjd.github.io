@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "엑스코드 공부"
 date: 2021-02-04 22:27:36 +0900
 author_profile: true

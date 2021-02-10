@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "함수 표현식과 함수 선언문의 차이"
 date: 2021-01-29 16:17:36 +0900
 author_profile: true

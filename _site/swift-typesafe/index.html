@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>화살표 함수(Arrow Function) 기초 - 성장하는 개발자, 하멍 기록장</title>
-<meta name="description" content="ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서">
+<!-- begin _includes/seo.html --><title>스위프트 타입 어노테이션과 타입 추론 - 성장하는 개발자, 하멍 기록장</title>
+<meta name="description" content="스위프트 기본 문법 - 타입 어노테이션과 타입 추론에 대해서">
 
 
   <meta name="author" content="Hyperidiot">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="성장하는 개발자, 하멍 기록장">
-<meta property="og:title" content="화살표 함수(Arrow Function) 기초">
-<meta property="og:url" content="http://localhost:4000/arrow-function/">
+<meta property="og:title" content="스위프트 타입 어노테이션과 타입 추론">
+<meta property="og:url" content="http://localhost:4000/swift-typesafe/">
 
 
-  <meta property="og:description" content="ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2021-01-27T23:45:36+09:00">
+  <meta property="og:description" content="스위프트 기본 문법 - 타입 어노테이션과 타입 추론에 대해서">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2021-02-10T21:00:36+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/arrow-function/">
+
+<link rel="canonical" href="http://localhost:4000/swift-typesafe/">
 
 
 
@@ -174,7 +174,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">화살표 함수(Arrow Function) 기초</li>
+        <li class="current">스위프트 타입 어노테이션과 타입 추론</li>
       
     
   </ol>
@@ -313,93 +313,69 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">화살표 함수(Arrow Function) 기초</h1>
+      <h1 id="page-title" class="page__title">스위프트 타입 어노테이션과 타입 추론</h1>
     
-    <p>ES5에서 등장한 화살표 함수(Arrow Function)의 기초에 대해서</p>
+    <p>스위프트 기본 문법 - 타입 어노테이션과 타입 추론에 대해서</p>
 
-<h1 id="화살표-함수arrow-function">화살표 함수(Arrow Function)</h1>
+<h1 id="타입-어노테이션과-타입-추론">타입 어노테이션과 타입 추론</h1>
 
-<p>화살표 함수는 ES5에서 등장했으며, 기존 함수 작성법을 보다 간결하게 할 수 있다.</p>
-
-<p>이 외에도 몇가지 추가적인 기능이 있는데, 우선은 기초적인 작성법만 기술하고자 한다.</p>
-
-<h2 id="화살표-함수의-작성법">화살표 함수의 작성법</h2>
-
-<p>코드를 보면 기존 자바스크립트의 함수 작성법과의 차이점이 즉시 느껴질 것이다.</p>
-
-<p><strong>기존 자바스크립트</strong></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1">// 15</span>
-</code></pre></div></div>
-
-<p><strong>ES5</strong></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1">// 15</span>
-</code></pre></div></div>
-
-<p>훨씬 간결하지 않은가?</p>
-
-<p>그러나 화살표 함수는 익명 함수로만 사용이 가능하다.
-이를 호출하고 싶다면, 함수 표현식을 사용하여 호출할 수 있다.</p>
-
-<p>때문에 이해를 돕기 위해 기존 자바스크립트의 코드도 함수 표현식으로 작성했다.</p>
-
-<p>화살표 함수는 인자를 하나만 받을 경우, 괄호를 생략할 수 있다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">pow</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="nx">n</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pow</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">// 25</span>
-</code></pre></div></div>
-
-<p>위 코드는 아래 코드와 같은 동작을 한다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">pow</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">n</span> <span class="o">*</span> <span class="nx">n</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pow</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1">// 25</span>
-</code></pre></div></div>
-
-<h3 id="화살표-함수-사용-시의-주의점">화살표 함수 사용 시의 주의점</h3>
-
-<p>기본적으로 화살표 함수는 표현식이 한 줄일때 사용하기 가장 편하다.</p>
-
-<p>그러나 함수의 표현식이 길어진다면, <code class="language-plaintext highlighter-rouge">return</code>을 직접 입력 해줘야한다.</p>
-
-<p>예시를 보자.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
-  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1">// 2</span>
-</code></pre></div></div>
-
-<p>함수의 본문이 두 줄 이상이면 기존 함수 작성과 동일하게 중괄호로 내용을 묶어주어야 하며, <code class="language-plaintext highlighter-rouge">return</code>을 직접 입력해줘야 한다는 점에 유의하자.</p>
-
-<h2 id="요약">요약</h2>
-
-<ol>
-  <li>화살표 함수는 ES5에서 등장했으며, 기존의 함수 작성법을 조금 더 간결하게 해줄 수 있다.</li>
-  <li>함수가 받는 인자가 하나라면 괄호는 생략 가능하지만, 두 개 이상이라면 생략이 불가능하다.</li>
-  <li>함수 본문이 한 줄이라면 암묵적으로 <code class="language-plaintext highlighter-rouge">return</code>이 있는 것 처럼 동작하지만, 두 줄 이상이라면 <code class="language-plaintext highlighter-rouge">return</code> 지시자를 입력해줘야 한다.</li>
-</ol>
-
-<p>더 자세한 내용을 배우기 위해선 <code class="language-plaintext highlighter-rouge">this</code> 등 선행지식이 있어야 한다.
-추후 <code class="language-plaintext highlighter-rouge">this</code>에 대해서 포스팅 하고, 심화 내용에 대해 기술해보려 한다.</p>
-
-<h2 id="references">References</h2>
+<p>Swift는 기본적으로 <strong>타입 안전(type safe)</strong> 프로그래밍 언어이다.</p>
 
 <blockquote>
-  <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function expressions MDN</a></p>
+  <p>Type Safe?</p>
+  <ul>
+    <li>변수의 데이터 타입이 식별되면 그 변수는 다른 타입의 데이터를 저장할 수 없다.</li>
+    <li>변수가 선언된 후에도 다른 데이터 타입을 입력할 수 있는 느슨한 타입과 대조적임(내가 이전에 공부하던 JS가 이 타입에 속한다.)</li>
+  </ul>
 </blockquote>
+
+<p>상수와 변수의 타입을 식별하는 방법은 두가지가 있다.</p>
+
+<ol>
+  <li>변수 / 상수가 선언되는 시점에 <strong>타입 어노테이션(type annotation)</strong>을 사용한다.
+    <ul>
+      <li>변수 또는 상수 이름 다음에 타입 선언</li>
+      <li>Int 타입의 x라는 변수를 선언</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">userCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">// Int가 type annotation임</span>
+</code></pre></div></div>
+
+<ol>
+  <li>해당 상수 또는 변수에 값이 할당되는 시점에서 그 값의 타입을 확인하고 그와 같은 타입처럼 사용한다.</li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">signalStrength</span> <span class="o">=</span> <span class="mf">2.231</span> <span class="c1">// 여기서 이 변수의 타입은 Double로 할당된다.(부동소수점 기본 값은 Float이 아닌 Double이다.)</span>
+<span class="k">let</span> <span class="nv">myName</span> <span class="o">=</span> <span class="s">"Hyperidiot"</span> <span class="c1">// String이 할당됨</span>
+</code></pre></div></div>
+<ul>
+  <li>signalStrength라는 변수를 Double 타입으로 간주하고 이후에도 Double 타입의 값을 할당하면 정상적으로 사용 가능</li>
+  <li>myName은 String으로 간주된다. 마찬가지로 이후에도 스트링 값을 넣어주면 정상적으로 사용할 수 있다.</li>
+</ul>
+
+<blockquote>
+  <p>변수 또는 상수의 선언 시점에서 초기값이 할당되지 않는 경우, 자료형의 명시가 필요하지만 초기값이 할당되는 경우에는 스위프트 컴파일러가 타입을 식별하기 위해서 <strong>타입 추론(type inference)</strong>을 한다. 따라서 위 예제코드에서 자료값을 할당하지 않았음에도 Double, String 타입이 할당된 것이다. 해당 상태에서 다른 타입의 값을 할당하려고 시도하면 오류가 발생한다.</p>
+</blockquote>
+
+<ol>
+  <li>타입 추론</li>
+</ol>
+
+<p>일반적으로 변수의 초기값이 존재하지 않는 경우에는 자료형을 명시하게 되는데(type annotation), 초기값이 존재하는 경우에는 자료형을 명시하지 않아도 스위프트 컴파일러가 자동적으로 값의 자료형을 추론하여 해당 변수에 자료형을 할당한다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">someValue</span><span class="p">:</span> <span class="kt">Int</span> <span class="c1">// 초기값이 없기 때문에 자료형을 명시해준다.</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">someValue</span><span class="p">)</span> <span class="c1">// 이 상태에서는 nil을 뱉는 게 아니라 오류가 발생한다.</span>
+<span class="n">someValue</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">someValue</span><span class="p">)</span> <span class="c1">// 10</span>
+
+<span class="k">var</span> <span class="nv">myName</span> <span class="o">=</span> <span class="s">"Hyperidiot"</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">myName</span><span class="p">)</span> <span class="c1">// Hyperidiot</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">of</span> <span class="n">myName</span><span class="p">))</span> <span class="c1">// String</span>
+<span class="c1">// 자동으로 자료형이 할당되었다.</span>
+</code></pre></div></div>
+
 
   </div>
 </div>

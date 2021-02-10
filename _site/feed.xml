@@ -1,4 +1,322 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-05T01:28:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">엑스코드 공부</title><link href="http://localhost:4000/xcode-start/" rel="alternate" type="text/html" title="엑스코드 공부" /><published>2021-02-04T22:27:36+09:00</published><updated>2021-02-04T22:27:36+09:00</updated><id>http://localhost:4000/xcode-start</id><content type="html" xml:base="http://localhost:4000/xcode-start/">&lt;p&gt;iOS 어플을 만들기 위한 애플의 IDE, XCode 공부일기&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-10T23:33:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">성장하는 개발자, 하멍 기록장</title><subtitle>꾸준히 성장하고싶은 개발자 하멍의 일기장</subtitle><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><entry><title type="html">스위프트 타입 옵셔널 기초 개념</title><link href="http://localhost:4000/swift-optional-basic/" rel="alternate" type="text/html" title="스위프트 타입 옵셔널 기초 개념" /><published>2021-02-10T22:00:36+09:00</published><updated>2021-02-10T22:00:36+09:00</updated><id>http://localhost:4000/swift-optional-basic</id><content type="html" xml:base="http://localhost:4000/swift-optional-basic/">&lt;p&gt;스위프트 기본 문법 - 옵셔널에 대해서(기초개념)&lt;/p&gt;
+
+&lt;h2 id=&quot;옵셔널optional&quot;&gt;옵셔널(Optional)&lt;/h2&gt;
+
+&lt;p&gt;옵셔널은 스위프트 입문자에게 충공깽을 선물하며 나가떨어지게 해주는 문지기다. 나도 그렇다. 그래서 공부한 내용을 정리를 좀 해보고자 글을 쓴다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;굉장히 생소한 개념이고 이해도 잘 안된다. 양자역학마냥 값이 있을 수도 있고, 없을 수도 있다라는 것을 표기할 때 나타낸다. 슈뢰딩거의 고양이냐?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;하지만 스위프트에서 매우 중요한 역할을 담당하므로 정상적으로 코드 작성을 하기 위해서는 꼭 넘어야 하는 산임은 분명하다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;옵셔널은 타입 어노테이션 시, 기본 자료형(Character, String, Int, Float, Double, etc..) 뒤에 ?나 !를 붙여서 표기할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Int&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Int? &amp;lt;&amp;lt;&amp;lt; 얘가 옵셔널&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;someInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Int&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;someOptionalInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Int?&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 10&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someOptionalInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional(10)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;각 값을 콘솔에 찍어보면 옵셔널은 값에 옵셔널임을 명시하고 괄호 안에 값이 출력됨을 알 수 있다.&lt;br /&gt;
+옵셔널은 일반적인 형태로 변환해주지 않으면 멀쩡하게 사용할 수가 없다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;//  error: value of optional type &apos;Int?&apos; must be unwrapped to a value of type &apos;Int&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;옵셔널의 가장 큰 특징은 값이 있을 수도 있고, 없을 수도 있다는 것이다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;옵셔널이 아닌 기본 자료형은 nil 값을 가질 수 없다.
+선언만 이루어지고 초기값이 주어지지 않은 상태에서 각 변수를 호출하면 그 차이를 쉽게 알 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Error, initialize 되지 않았음&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myOptionalNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myOptionalNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;마찬가지로, 옵셔널이 아닌 변수에 nil을 할당하려고 시도해도 오류가 발생한다. 하지만 옵셔널 값은 nil을 할당할 수 있다.(값이 없을 수 있기 때문에)&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;myNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &apos;nil&apos; cannot be assigned to type &apos;Int&apos;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myOptionalNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;myOptionalNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;옵셔널은 값이 반환될 때 오류가 발생할 가능성이 있는 경우에 사용된다.
+예를 들어서 String 타입의 값을 Int형으로 새로 생성할 때의 코드를 보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stringNumToInt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional(100)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stringStrToInt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int()&lt;/code&gt;의 타입을 확인해보면 옵셔널이다. 왜 그럴까?&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int(&quot;Hi&quot;)&lt;/code&gt;의 출력 값을 보면 알겠지만, 정수로 반환될 수 없는 값이 들어올 수 있는 가능성을 내포하고 있기 때문이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;옵셔널의-용도&quot;&gt;옵셔널의 용도&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;옵셔널 타입은 변수/상수에 아무런 값이 할당되지 않는 상황을 안전하게 처리하기 위한 방법을 제공한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;옵셔널-값을-일반형태로-변환시키기&quot;&gt;옵셔널 값을 일반형태로 변환시키기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;옵셔널 변수에 값이 있으면 옵셔널로 래핑되었다(Wrapped)고 표현한다.&lt;/li&gt;
+  &lt;li&gt;옵셔널에 래핑된 값은 몇가지 방법을 통하여 언래핑할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;강제-언래핑forced-unwrapping&quot;&gt;강제 언래핑(Forced Unwrapping)&lt;/h3&gt;
+
+&lt;p&gt;강제 언래핑은 옵셔널 값에 !를 붙이면 된다. 매우 간단하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 옵셔널 정수형 변수 x 선언&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional(10)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional(10)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 10 &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// !을 붙임으로 forced unwrapping이 이루어졌다.(일반 자료형으로 가공됨)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그러나 치명적인 단점이 있다.&lt;br /&gt;
+값이 nil인 변수를 강제 언래핑하게 되면, Fatal error를 던지며 프로그램은 죽어버린다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 옵셔널 정수형 변수 x 선언&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 초기화가 되지 않았으므로 값은 nil이다.&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 으악! 값이 없어서 벗길 수가 없어요.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Fatal error&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;따라서 주로 조건문을 활용하여 해당 변수의 값이 nil이 아닌지 확인 후에 강제 언래핑을 하는 경우가 많다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myOptionalInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myOptionalInt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myOptionalInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myOptionalInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; nil&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hyperidiot&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional(&quot;Hyperidiot&quot;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; &quot;Hyperidiot&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;옵셔널-바인딩optional-binding&quot;&gt;옵셔널 바인딩(Optional Binding)&lt;/h3&gt;
+
+&lt;p&gt;옵셔널 바인딩이란, 옵셔널이 할당된 값을 임시 변수 또는 상수에 할당하여 옵셔널을 언래핑하는 방법이다.&lt;br /&gt;
+강제 언래핑보다 안전하고, 옵셔널을 벗기는 가장 보편적인 방법이다. 단 처음에 볼때는 이해가 잘 안될 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;someConst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optionalName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 옵셔널 변수가 값이 있다면 if문의 조건은 true가 됨. &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// optionalName의 옵셔널을 언래핑하여 일반 상수 someConst에 대입시키고 if문을 실행시킨다.&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// 만약 값이 nil이라면 if문의 조건은 false가 되고 조건문은 실행되지 않는다.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;if let 구문 자체는 이렇게 해석하면 되겠다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optionalName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;someConst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optionalName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// someConst에 optionalName이 할당된 이후에 if let 본체 코드가 실행된다.&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// *주의* optionalName은 여전히 optional이다. 가공된 값은 someConst에 할당된다.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;실제 실행 시에는 이런 모습이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional(10)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unwrappedX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unwrappedX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 10&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; 10이 출력된다.&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unwrappedY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unwrappedY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// nil&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; nil이 출력된다.&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;여러-옵셔널을-동시에-언래핑하기&quot;&gt;여러 옵셔널을 동시에 언래핑하기&lt;/h4&gt;
+
+&lt;p&gt;여러 옵셔널 변수를 콤마를 통해 동시에 언래핑할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;person1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;person2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Chulsu&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Minsu&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;firstPerson&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;secondPerson&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstPerson&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; : Hello &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secondPerson&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nil&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; Chulsu : Hello Minsu!&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;단, 하나라도 nil값이 포함되어 있으면 if문의 조건은 false가 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;person1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;person2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Chulsu&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;firstPerson&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;secondPerson&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstPerson&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; : Hello &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secondPerson&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nil&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; nil&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;암묵적-언래핑implicitly-unwrapping&quot;&gt;암묵적 언래핑(Implicitly Unwrapping)&lt;/h2&gt;
+
+&lt;p&gt;옵셔널이 항상 유효한 값을 가질 경우(절대 nil이 될 일이 없는 경우)에는 옵셔널이 암묵적으로 언래핑을 하게끔 선언할 수도 있다.&lt;br /&gt;
+클래스의 아웃렛 변수 초기화에서 많이 사용된다.(자동 생성되는 코드)&lt;/p&gt;
+
+&lt;p&gt;이러한 방법으로 옵셔널이 선언된다면 강제 언래핑이나 옵셔널 바인딩을 하지 않아도 값에 접근할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;암묵적 언래핑으로 옵셔널을 선언하기 위해선 선언부에 물음표 대신 느낌표를 사용하면 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 옵셔널 변수 선언방법 1. 이 경우 옵셔널을 벗겨줘야 함&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 옵셔널 변수 선언방법 2. 암묵적 언래핑이 된다.&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위에서 말했지만 옵셔널 변수의 값이 nil일 때, 강제 언래핑을 시도하면 Fatal error를 던지며 프로그램이 죽어버린다.
+따라서 절대로 nil이 들어갈 일이 없는 변수에만 암묵적 언래핑을 활용하도록 하는게 좋겠다.&lt;/p&gt;
+
+&lt;p&gt;다음 코드를 보면 암묵적 언래핑이 어떤 식으로 이뤄지는지 알 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// type annotation이 Optional이 아니기 때문에 암묵적으로 언래핑이 된다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// type annotation이 없다. 이 경우 a의 자료형을 가져오므로 d는 옵셔널이다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;// 원래 옵셔널과 일반자료형은 연산이 불가능하지만 이 경우 암묵적 언래핑을 수행하여 연산된다.&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// ---&amp;gt; Optional(1) 1 1 Optional(1) 2&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">스위프트 기본 문법 - 옵셔널에 대해서(기초개념)</summary></entry><entry><title type="html">스위프트 타입 어노테이션과 타입 추론</title><link href="http://localhost:4000/swift-typesafe/" rel="alternate" type="text/html" title="스위프트 타입 어노테이션과 타입 추론" /><published>2021-02-10T21:00:36+09:00</published><updated>2021-02-10T21:00:36+09:00</updated><id>http://localhost:4000/swift-typesafe</id><content type="html" xml:base="http://localhost:4000/swift-typesafe/">&lt;p&gt;스위프트 기본 문법 - 타입 어노테이션과 타입 추론에 대해서&lt;/p&gt;
+
+&lt;h1 id=&quot;타입-어노테이션과-타입-추론&quot;&gt;타입 어노테이션과 타입 추론&lt;/h1&gt;
+
+&lt;p&gt;Swift는 기본적으로 &lt;strong&gt;타입 안전(type safe)&lt;/strong&gt; 프로그래밍 언어이다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Type Safe?&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;변수의 데이터 타입이 식별되면 그 변수는 다른 타입의 데이터를 저장할 수 없다.&lt;/li&gt;
+    &lt;li&gt;변수가 선언된 후에도 다른 데이터 타입을 입력할 수 있는 느슨한 타입과 대조적임(내가 이전에 공부하던 JS가 이 타입에 속한다.)&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;상수와 변수의 타입을 식별하는 방법은 두가지가 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;변수 / 상수가 선언되는 시점에 &lt;strong&gt;타입 어노테이션(type annotation)&lt;/strong&gt;을 사용한다.
+    &lt;ul&gt;
+      &lt;li&gt;변수 또는 상수 이름 다음에 타입 선언&lt;/li&gt;
+      &lt;li&gt;Int 타입의 x라는 변수를 선언&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;userCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Int가 type annotation임&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;해당 상수 또는 변수에 값이 할당되는 시점에서 그 값의 타입을 확인하고 그와 같은 타입처럼 사용한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;signalStrength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.231&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 여기서 이 변수의 타입은 Double로 할당된다.(부동소수점 기본 값은 Float이 아닌 Double이다.)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hyperidiot&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// String이 할당됨&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;signalStrength라는 변수를 Double 타입으로 간주하고 이후에도 Double 타입의 값을 할당하면 정상적으로 사용 가능&lt;/li&gt;
+  &lt;li&gt;myName은 String으로 간주된다. 마찬가지로 이후에도 스트링 값을 넣어주면 정상적으로 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;변수 또는 상수의 선언 시점에서 초기값이 할당되지 않는 경우, 자료형의 명시가 필요하지만 초기값이 할당되는 경우에는 스위프트 컴파일러가 타입을 식별하기 위해서 &lt;strong&gt;타입 추론(type inference)&lt;/strong&gt;을 한다. 따라서 위 예제코드에서 자료값을 할당하지 않았음에도 Double, String 타입이 할당된 것이다. 해당 상태에서 다른 타입의 값을 할당하려고 시도하면 오류가 발생한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;타입 추론&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;일반적으로 변수의 초기값이 존재하지 않는 경우에는 자료형을 명시하게 되는데(type annotation), 초기값이 존재하는 경우에는 자료형을 명시하지 않아도 스위프트 컴파일러가 자동적으로 값의 자료형을 추론하여 해당 변수에 자료형을 할당한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 초기값이 없기 때문에 자료형을 명시해준다.&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 이 상태에서는 nil을 뱉는 게 아니라 오류가 발생한다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;someValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 10&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hyperidiot&quot;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Hyperidiot&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// String&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 자동으로 자료형이 할당되었다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">스위프트 기본 문법 - 타입 어노테이션과 타입 추론에 대해서</summary></entry><entry><title type="html">스위프트 Range에 대해서</title><link href="http://localhost:4000/switch-range/" rel="alternate" type="text/html" title="스위프트 Range에 대해서" /><published>2021-02-05T23:00:36+09:00</published><updated>2021-02-05T23:00:36+09:00</updated><id>http://localhost:4000/switch-range</id><content type="html" xml:base="http://localhost:4000/switch-range/">&lt;p&gt;스위프트의 특별한 자료형 Range에 대해서&lt;/p&gt;
+
+&lt;p&gt;스위프트를 공부하다 보니 조금 유별난 자료형을 찾았는데, 바로 range다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 Closed, Half-Open 등으로 나뉘는데, 여러가지 숫자를 한번에 취급할 수 있다는 점에서 튜플 등과 같이 사용했을 때 좋은 듯 하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;closedRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;halfClosedRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이런 식으로 표현할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;닫힌 레인지는 0에서 10까지의 수를 모두 포함하고, 반만 닫힌 레인지는 0에서 9까지의 수를 포함한다.&lt;/p&gt;
+
+&lt;p&gt;문자열의 count를 이용할 때나, 튜플 내의 자료를 꺼내올 때 유용하게 쓰이지 않을까 싶다.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">스위프트의 특별한 자료형 Range에 대해서</summary></entry><entry><title type="html">엑스코드 공부</title><link href="http://localhost:4000/xcode-start/" rel="alternate" type="text/html" title="엑스코드 공부" /><published>2021-02-04T22:27:36+09:00</published><updated>2021-02-04T22:27:36+09:00</updated><id>http://localhost:4000/xcode-start</id><content type="html" xml:base="http://localhost:4000/xcode-start/">&lt;p&gt;iOS 어플을 만들기 위한 애플의 IDE, XCode 공부일기&lt;/p&gt;
 
 &lt;p&gt;잘 하지도 못하는 영어.. 조금씩 글 읽어가면서 엑스코드는 어떻게 쓰는거고, 스위프트는 어떤 언어인지 조금씩 보고 있다.&lt;/p&gt;
 
@@ -379,24 +697,7 @@ RN이 오히려 스타일링과 요소부분을 구별 가능해서 낫다고 �
 
 &lt;p&gt;어떻게 구현하는건지 알게 되서 기쁘다.&lt;/p&gt;
 
-&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">Pop Cat meme 애플리케이션</title><link href="http://localhost:4000/pop-cat-app/" rel="alternate" type="text/html" title="Pop Cat meme 애플리케이션" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/pop-cat-app</id><content type="html" xml:base="http://localhost:4000/pop-cat-app/">&lt;p&gt;요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/popcat.gif&quot; alt=&quot;popcat.gif&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;그냥 귀여워서 만들었다.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;코딩을 시작하면서 느낀 점이 있는데, 참 놀랍다. 만들고 싶다고 생각한 걸 눈에 보이는 아웃풋으로 변환할 수 있다니..
-단순히 컴퓨터와 키보드만 있다면 내 아이디어를 실현시킬 수 있는 것이다.&lt;/p&gt;
-
-&lt;p&gt;이번에는 이벤트 제어를 메인으로, 사용해본 적 없는 keydown 이벤트를 사용해봤다. 모바일 지원을 위해 touchstart / touchend 기능도 사용해봤으나 원활하게 작동하지는 않는 듯 하다. (뭐가 문제인지 모르겠음)&lt;/p&gt;
-
-&lt;p&gt;역시 작은 요소라도 하나씩 만들어보는 게 기억에는 가장 잘 남지 않나 싶다.
-앞으로 꾸준히 이런 작은 요소들을 만들어보면서 각 코어기능들을 조금 더 공부할 수 있도록 해보려 한다.&lt;/p&gt;
-
-&lt;p&gt;여기서 해볼 수 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/pop-cat&quot;&gt;POPCAT!&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">요즘 뜨고있는 pop cat을 컨트롤할 수 있는 애플리케이션을 만들어봤다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
+&lt;p&gt;생각보다 굉장히 단순하게 적용 가능해서, 실용성이 매우 높아보인다. 그렇다고 남발할 수는 없겠지만.&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">최근 자바스크립트에만 너무 열심인 것 같아, CSS 레이아웃을 몇개 만들었다.</summary></entry><entry><title type="html">To-Do-List by Vanilla JS</title><link href="http://localhost:4000/ToDoList/" rel="alternate" type="text/html" title="To-Do-List by Vanilla JS" /><published>2021-01-22T23:45:36+09:00</published><updated>2021-01-22T23:45:36+09:00</updated><id>http://localhost:4000/ToDoList</id><content type="html" xml:base="http://localhost:4000/ToDoList/">&lt;p&gt;바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/todopreview.png&quot; alt=&quot;todo&quot; /&gt;
 내가 좋아하는 노마드코더 니꼬가 말하길, 투두리스트가 자바스크립트 계의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world&lt;/code&gt;라고 한다.&lt;/p&gt;
@@ -412,238 +713,4 @@ RN이 오히려 스타일링과 요소부분을 구별 가능해서 낫다고 �
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://tndvjd.github.io/hyper-todolist&quot;&gt;HyperToDo&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry><entry><title type="html">var 사용을 지양해야하는 까닭</title><link href="http://localhost:4000/var-let-const-diff/" rel="alternate" type="text/html" title="var 사용을 지양해야하는 까닭" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/var-let-const-diff</id><content type="html" xml:base="http://localhost:4000/var-let-const-diff/">&lt;p&gt;변수 선언을 위해 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 사용을 피하는 게 좋다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;의 특징을 알아보자.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;var&quot;&gt;var&lt;/h1&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 초기 자바스크립트에서 등장했으며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt;,와 상이한 점이 몇가지 존재한다.
-구형 코드에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;를 많이 볼 수 있는데, 이를 무턱대고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;으로 고치게 되면 코드가 엉망진창이 될 수 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;중복선언-가능&quot;&gt;중복선언 가능&lt;/h2&gt;
-
-&lt;p&gt;우선 가장 큰 특징으로는 &lt;strong&gt;중복선언&lt;/strong&gt;이 가능하다는 것이다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hyperidiot&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Hyperidiot&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hamung&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Hamung&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;분명 위에서 선언을 했음에도 불구하고 에러가 나오지 않는다.&lt;br /&gt;
-이는 유연한 변수 선언에는 도움이 될 수도 있지만, 대부분의 경우 우리를 괴롭힐 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;ex)&lt;/em&gt; 코드가 길어졌을 때, 실수로 같은 이름의 변수를 선언하면 어마어마한 에러를 내뱉을 것이다. 하지만 디버깅에는 오랜 시간이 걸릴 것이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;블록-스코프의-부재&quot;&gt;블록 스코프의 부재&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 블록 스코프가 없다. 함수 스코프거나 전역 스코프이다.
-블록을 기준으로 스코프가 생기지 않기 때문에, 블록 밖에서 접근이 가능하다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;hello world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// hello world!&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;가 if문 밖에서도 동작을 하는 것을 볼 수 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;var-호이스팅&quot;&gt;var 호이스팅&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Glossary/Hoisting&quot;&gt;호이스팅(Hoisting)&lt;/a&gt;이란 “끌어 올리기”라는 뜻이 있는데, 쉽게 풀어 말하면 &lt;strong&gt;변수를 선언하기전에 사용할 수 있다&lt;/strong&gt;라는 것이다.&lt;br /&gt; 코드를 보면 바로 이해할 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위 코드는 다음과 같다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 변수를 “끌어 올리는” 현상을 호이스팅이라고 부른다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;로 선언된 변수는 기본적으로 함수의 최상단으로 호이스팅된다.&lt;/p&gt;
-
-&lt;p&gt;변수는 &lt;em&gt;선언&lt;/em&gt; &amp;gt; &lt;em&gt;초기화&lt;/em&gt; &amp;gt; &lt;em&gt;할당&lt;/em&gt; 순서로 생성되는데, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;로 선언된 변수는 선언과 초기화가 동시에 이루어진다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;즉, 할당은 호이스팅 되지 않는다.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이해가 되는가? &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var phrase = &quot;Hello world!&quot;&lt;/code&gt;에서는 다음과 같은 일이 벌어진다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;변수 선언 + 초기화 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;변수 할당 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hello world!&lt;/code&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;따라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alert(text)&lt;/code&gt;의 값은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;undefind&lt;/code&gt;가 된다.&lt;/p&gt;
-
-&lt;p&gt;위 코드는 아래 코드와 같은 코드처럼 동작한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 선언은 호이스팅되므로 함수의 최상단으로 &quot;끌어 올려진다.&quot;&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// undefind, 값이 할당되지 않았음.&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;로 선언한 변수는 어디서든 참조 가능하지만, 실제 할당이 이루어지는 코드 행까지는 그 값이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;undefind&lt;/code&gt;가 된다.&lt;/p&gt;
-
-&lt;p&gt;이러한 점이 혼란을 야기할 때가 종종 있기 때문에, 변수를 선언할 때엔 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt;를 주로 사용한다.&lt;/p&gt;
-
-&lt;h1 id=&quot;요약&quot;&gt;요약&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;로 선언한 변수는 블록 스코프를 무시한다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;는 선언과 초기화가 함수 시작지점에서 처리된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;그러니 이러한 특성을 마스터하고 자유자재로 다룰 수 있는 수준이 아니라면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt; 사용을 지양하자.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">변수 선언을 위해 사용하는 var는 사용을 피하는 게 좋다. var의 특징을 알아보자.</summary></entry><entry><title type="html">마크다운 사용법</title><link href="http://localhost:4000/markdown-basic/" rel="alternate" type="text/html" title="마크다운 사용법" /><published>2021-01-19T00:00:00+09:00</published><updated>2021-01-19T00:00:00+09:00</updated><id>http://localhost:4000/markdown-basic</id><content type="html" xml:base="http://localhost:4000/markdown-basic/">&lt;p&gt;본격적인 첫 포스팅을 위해서, 마크다운에 관해 앞서 설명하고자 한다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;마크다운에-관하여&quot;&gt;마크다운에 관하여&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://whatismarkdown.com/&quot;&gt;마크다운&lt;/a&gt;이란 텍스트 기반의 마크업 언어로, 2004년 존 그루버에 의해 만들어졌다.
-마크다운의 가장 큰 특징으로는 문법이 매우 간단하며, 읽기에 편하다는 점이다. 주로 위키류의 페이지가 마크다운 방식을 채용하고 있는데, 매우 직관적인 구조이기 때문에 컨텐츠의 작성 및 인식에 있어 유리한 점이 많다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;을 사용하는 사람에게는 매우 친숙할 수 있는데, 깃헙의 레파지토리에 기본적인 정보를 표시해주는 README.md 파일이 바로 마크다운을 통해 작성된 문서이기 때문이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마크다운의-장점&quot;&gt;마크다운의 장점&lt;/h2&gt;
-&lt;p&gt;문법이 매우 단순하고, 누구나 쉽게 익힐 수 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마크다운의-단점&quot;&gt;마크다운의 단점&lt;/h2&gt;
-&lt;p&gt;모든 HTML 문법을 대체할 수는 없다.&lt;/p&gt;
-
-&lt;h2 id=&quot;마크다운-문법&quot;&gt;마크다운 문법&lt;/h2&gt;
-&lt;p&gt;글 작성을 위해 필요한 기본적인 문법을 알아보도록 하자. 본 게시글에서는 모든 마크다운 문법을 다루지는 않고 아주 기초적인 마크다운 문법만을 다루고 있다.
-나도 깃헙을 통해 마크다운을 처음 알게 되었고, 이제 막 사용하기 시작했으므로 복습 겸 남기는 의미가 크기 때문에..&lt;/p&gt;
-
-&lt;h3 id=&quot;1-제목-headers&quot;&gt;1. 제목 Headers&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; 으로 시작하는 텍스트. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt; ~ &amp;lt;h6&amp;gt;&lt;/code&gt;과 동일한 역할을 수행한다.&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;의 갯수가 많아질 수록 크기가 줄어든다. &lt;strong&gt;(중요도가 낮아진다)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size: 36px&quot;&gt; This is Heading 1. &lt;/p&gt;
-  &lt;p style=&quot;font-size: 32px&quot;&gt; This is Heading 2. &lt;/p&gt;
-  &lt;p style=&quot;font-size: 28px&quot;&gt; This is Heading 3. &lt;/p&gt;
-  &lt;p style=&quot;font-size: 24px&quot;&gt; This is Heading 4. &lt;/p&gt;
-  &lt;p style=&quot;font-size: 20px&quot;&gt; This is Heading 5. &lt;/p&gt;
-  &lt;p style=&quot;font-size: 16px&quot;&gt; This is Heading 6. &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;2-강조-emphasis&quot;&gt;2. 강조 Emphasis&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;볼드체&lt;/strong&gt;를 사용하거나 &lt;em&gt;이탤릭체&lt;/em&gt;를 사용하여 강조를 표현할 수 있다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;볼드체는 **이렇게** 사용할 수 있다.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;볼드체는 &lt;strong&gt;이렇게&lt;/strong&gt; 사용할 수 있다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이탤릭체는 *이렇게* 사용할 수 있다.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;이탤릭체는 &lt;em&gt;이렇게&lt;/em&gt; 사용할 수 있다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;진짜 중요할땐 ***이렇게*** 써보자&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;진짜 중요할땐 &lt;strong&gt;&lt;em&gt;이렇게&lt;/em&gt;&lt;/strong&gt; 써보자&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;3-인용-blockquotes&quot;&gt;3. 인용 Blockquotes&lt;/h3&gt;
-
-&lt;p&gt;단순히 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 를 입력한 후 글을 쓰면 인용문이 된다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 인용문을 이렇게 만들 수 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;인용문을 이렇게 만들 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;4-코드-블럭-code-blocks&quot;&gt;4. 코드 블럭 Code Blocks&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~~~&lt;/code&gt; 블럭의 시작, 끝에 위 문자를 입력하여 물결표를 세개 입력하여 코드 블럭을 만들 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;코드 블럭은
-이런 식으로
-여러 줄로 쓸 수 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;코드 블럭의 타겟 언어를 지정해줄 수도 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is HTML&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;블럭의 시작 물결표 뒤에 프로그래밍 언어 명을 적음을 통해 syntax highlight 기능을
-  사용할 수 있다.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt; ex : ~~~html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;5-하이퍼링크-hyperlinks&quot;&gt;5. 하이퍼링크 Hyperlinks&lt;/h3&gt;
-
-&lt;p&gt;문자에 하이퍼링크를 연결할 수 있다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[구글](https://google.com)&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://google.com&quot;&gt;구글&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;6-이미지&quot;&gt;6. 이미지&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![alt](/working_me.gif)&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://smilecounter.com/images/item/8.gif&quot; alt=&quot;alt&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">본격적인 첫 포스팅을 위해서, 마크다운에 관해 앞서 설명하고자 한다.</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name>Hyperidiot</name><email>tndvjd@gmail.com</email></author><summary type="html">바닐라 자바스크립트를 이용하여 간단한 투두리스트를 만들어봤다.</summary></entry></feed>

@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: archive
+classes: wide
 title: "CSS 레이아웃 연습"
 date: 2021-01-25 23:45:36 +0900
 author_profile: true
